@@ -129,12 +129,12 @@ aside#sidebar p.repo-owner a {
 }
 
 a.button {
-  width: 134px;
-  height: 58px;
+  width: 225px;
+  height: 100px;
   line-height: 1.2;
   font-size: 23px;
   color: #fff;
-  padding-left: 68px;
+  padding-left: 80px;
   padding-top: 22px;
   font-family:'Helvetica Neue', Helvetica, Arial, serif; 
 }
@@ -217,7 +217,7 @@ td {
 }
 
 form {
-  background: #f2f2f2;
+  background: ;
   padding: 20px;
   
 }
