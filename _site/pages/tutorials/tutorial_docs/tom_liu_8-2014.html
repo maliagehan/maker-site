@@ -92,10 +92,36 @@
 <p><br></p>
 
 <p><a href="/images/tutorial_imgs/tom_liu_8-21-14/img7.png" target="_blank">
-<img src="/images/tutorial_imgs/tom_liu_8-21-14/img7.png" align="center" width="600"></a><br>
-<br></p>
+<img src="/images/tutorial_imgs/tom_liu_8-21-14/img7.png" align="center" width="600"></a></p>
 
-<p><b>Setting up Raspberry Pi:</b>  </p>
+<p><a id="contents"></a> <b>Contents:</b><br>
+<ol>
+<li><a href="#setup">Setting up Raspberry Pi</a> </li></p>
+
+<p><li><a href="#cam">Setting up Raspberry Pi Camera</a></li>
+  <ul>
+    <li><a href="#op-cam">Option: Enable camera</a> 
+    <li><a href="#op-focus">Option: Change camera focus</a><br>
+    <li><a href="#op-filters">Option: Cutoff Filters</a>
+    <li><a href="#op-led">Option: Disable camera LED</a>
+  </ul>  </p>
+
+<p><li><a href="#time-lapse">Time-Lapse Imaging</a></li></p>
+
+<p><li><a href="#led-array">Setting up LED array</a></li>
+    <ul>
+      <li><a href="#op-cycletimer">Option: Cycle Timer</a></li>
+    </ul></p>
+
+<p><li><a href="#station">Setting up imaging station</a></li></p>
+
+<p><li><a href="#liquid">Plant Seed Sterilization</a></li></p>
+
+<p><li><a href="#hypocotyl">Measuring Plant Hypocotyl Length</a></li></p>
+
+<p></ol></p>
+
+<p><a id="setup"></a><b>Setting up Raspberry Pi.</b> <a href="#contents">back to top</a></p>
 
 <p>1. Open the Raspberry Pi Complete Starter Kit and take out its contents.
 </p>
@@ -137,7 +163,7 @@
 <div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="n">pi</span><span class="nd">@raspberrypi</span><span class="o">~</span><span class="err">$</span> 
 </code></pre></div>
 <p><br>
-<b>Setting the Time and Date on your Raspberry Pi.</b></p>
+<b>Setting the Time and Date on your Raspberry Pi.</b> <a href="#contents">back to top</a></p>
 
 <p>  
 <b><font color="orange">Note:</font></b> The Rasberry Pi does not have a very accurate clock, so the time needs to be reset and coordinated frequently to avoid drift. To set the date:
@@ -157,7 +183,7 @@
 <div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="n">date</span>
 </code></pre></div>
 <p><br>
-<b>Setting up the Raspberry Pi camera</b></p>
+<a id="cam"></a><b>Setting up the Raspberry Pi camera. </b> <a href="#contents">back to top</a></p>
 
 <p>We followed instructions that can be found <a href="http://thepihut.com/pages/how-to-install-the-raspberry-pi-camera">here</a></p>
 
@@ -177,7 +203,7 @@
 <p>5. The picture is now in your home folder, "labeled image.jpg"
 </p>
 
-<p><b><font color="green">Optional:</font></b> If you did not enable the camera option after installing the OS and running raspi-config for the first time.</p>
+<p><a id="op-cam"></a><b><font color="green">Optional:</font></b> If you did not enable the camera option after installing the OS and running raspi-config for the first time. <a href="#contents">back to top</a></p>
 
 <p>1. From the prompt, run:
 
@@ -199,7 +225,7 @@
 <p>3. Navigate to the camera option, and enable it. Select Finish and reboot your Raspberry Pi.
 </p>
 
-<p><b><font color="green">Optional:</font></b> Changing focus of the camera  </p>
+<p><a id="op-focus"></a><b><font color="green">Optional:</font></b> Changing focus of the camera. <a href="#contents">back to top</a></p>
 
 <p>See video from George Wang:
 </p>
@@ -220,7 +246,7 @@
 <p><b><font color="orange">Note:</font></b> It is suggested to use a ruler and place the camera at one end of the ruler. Place an object at the desired distance (we use a business card to look for fine detail) and adjust the focus until sharp.
 </p>
 
-<p><b><font color="green">Optional:</font></b> Cutoff filters</p>
+<p><a id="op-filters"></a><b><font color="green">Optional:</font></b> Cutoff filters. <a href="#contents">back to top</a></p>
 
 <p>1. We use a 730 nm cutoff filter (Lee #87) to block visible light when combining the NoIR camera with an 880 nm LED array to image plants under diurnal cycles. The cutoff filter helps prevent changes in contrast during imaging, making image processing easier.
 </p>
@@ -231,12 +257,12 @@
 <img src="/images/tutorial_imgs/tom_liu_8-21-14/img2.png" align="center" width="400"></a><br>
 Figure 1. Raspberry Pi with 730nm cutoff filter over lens. 
 <br>
-<p><b><font color="green">Optional:</font></b> 3D Print a computer and camera case
+<p><b><font color="green">Optional:</font></b> 3D Print a computer and camera case. <a href="#contents">back to top</a>
 </p></p>
 
 <p>Again, See <a href="http://www.thingiverse.com/thing:256960">here</a> for a Raspberry Pi case and Camera holder with ball joint</p>
 
-<p><b><font color="green">Optional:</font></b> Disabling LED light in camera</p>
+<p><a id="op-led"></a><b><font color="green">Optional:</font></b> Disabling LED light in camera. <a href="#contents">back to top</a></p>
 
 <p>1. If you are imaging plants, then the red light on the camera could cause unwanted responses. To turn off the LED, add the command to the <b>config.txt file</b>:
 </p>
@@ -258,17 +284,17 @@ Figure 1. Raspberry Pi with 730nm cutoff filter over lens.
 <div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="n">sudo</span> <span class="n">reboot</span>
 </code></pre></div>
 <p><b><font color="orange">Note:</font></b> There is not a way to disable the LEDs on the circuit board of the Raspberry Pi itself, however, puffy black fabric paint is opaque and can be used to block light from the board.
-<br>
-<a href="/images/tutorial_imgs/tom_liu_8-21-14/img3.png" target="_blank">
+<br></p>
+
+<p><a href="/images/tutorial_imgs/tom_liu_8-21-14/img3.png" target="_blank">
 <img src="/images/tutorial_imgs/tom_liu_8-21-14/img3.png" align="center" width="400"></a><br>
 Figure 2. LEDs covered with puffy black fabric paint.
-<br>
+<br></p>
 
-<p><b>Time lapse imaging:</b>
-</p>
+<p><a id="time-lapse"></a><b>Time lapse imaging.</b> <a href="#contents">back to top</a></p>
 
 <p>There are many methods to setting up timelapse imaging on the Raspberry Pi, and the one that we use is to set up a crontab job. This is essentially a script that will run in the background, and take a picture at a prescribed minute/hour/day/month/and day of week.
-To edit crontab:</p>
+To edit crontab:  </p>
 <div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="n">crontab</span> <span class="o">-</span><span class="n">e</span>
 </code></pre></div>
 <p>1. Use the arrow keys to go to the bottom of the page after the # signs, then:
@@ -283,7 +309,7 @@ To edit crontab:</p>
 <p>3. Now the system will take a picture each twenty minutes. The above line can be edited to change time of the picture, options on the camera (e.g. quality, white balance, exposure, rotation, etc), location of where the pictures are saved (you may want to save to a specific folder).
 </p>
 
-<p><b>Setting up 880nm LED array (32 LED array)</b></p>
+<p><a id="led-array"></a><b>Setting up 880nm LED array (32 LED array). </b> <a href="#contents">back to top</a></p>
 
 <p><a href="/images/tutorial_imgs/tom_liu_8-21-14/img4.png" target="_blank">
 <img src="/images/tutorial_imgs/tom_liu_8-21-14/img4.png" align="center" width="400"></a><br>
@@ -323,11 +349,11 @@ Figure 4. Back of LED array.
 Figure 5. LED array with Diffuser on top of power supply which doubles as a stand. 
 <br></p>
 
-<p><b><font color="green">Optional:</font></b> Cycle timer to coordinate turning on LED array with imaging. 
+<p><a id="op-cycletimer"></a><b><font color="green">Optional:</font></b> Cycle timer to coordinate turning on LED array with imaging. <a href="#contents">back to top</a>
 <br><br>
 There are many ways to trigger the LED arrays when imaging. The simplest is to use a cycle timer to turn on the array coincidentally with imaging. We use a CT-1 Digital Recycle Timer (Innovative Grower), which will turn on the lights for 10sec to 99 hours and then turn them off for 10sec to 99 hours. These timers have a small amount of drift, but if you re-coordinate the timer with your Raspberry Pi at the beginning of the experiment, it can work well. </p>
 
-<p><b>Setup of imaging station</b></p>
+<p><a id="station"></a><b>Setup of imaging station. </b> <a href="#contents">back to top</a></p>
 
 <p>1. If you are going to backlight your plants (if they are growing on tissue culture plates or in solo cups) place the plants between your Pi imaging system (at the proper distance from the lens so that the plants/seedlings are in focus) and the LED array.
 </p>
@@ -342,7 +368,7 @@ There are many ways to trigger the LED arrays when imaging. The simplest is to u
 Figure 6. Backlight imaging set up.
 <br></p>
 
-<p><b>Liquid sterilization</b></p>
+<p><a id="liquid"></a><b>Liquid sterilization. </b> <a href="#contents">back to top</a></p>
 
 <p>1. Aliquot desired amount of seeds (typically 18-100) into labeled 1.5 mL tubes.
 </p>
@@ -374,7 +400,7 @@ Figure 6. Backlight imaging set up.
 <p>10. Transfer to a controlled environment chamber.
 </p>
 
-<p><b>Measuring Hypocotyl Length</b></p>
+<p><a id="hypocotyl"></a><b>Measuring Hypocotyl Length. </b> <a href="#contents">back to top</a></p>
 
 <p>1. Transfer files from Raspberry Pi to a folder that will contain only the images to be analyzed (e.g. 72 hours worth of images)
 </p>
