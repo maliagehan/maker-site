@@ -98,19 +98,9 @@ We followed instructions that can be found [here](http://thepihut.com/pages/how-
     sudo raspi-config
     
     #If the "camera" option is not listed, you will need to run a few commands to update your Raspberry Pi.
+    
     sudo apt-get update
     sudo apt-get upgrade
 
   ```
-</p>
 
-<p>2. Then run:
-
-  ```python
-    sudo raspi-config
-    
-    #you should now see the "camera" option.
-  ```
-</p>
-<p>3. Navigate to the "camera" option, and enable it. Select Finish” and reboot your Raspberry Pi.
-</p>
