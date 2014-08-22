@@ -1,12 +1,14 @@
 ---
-layout: docs
-title: Documentation
-subtitle: Getting started
+layout: tutorials
+title: Tutorial Overview
+subtitle: Tutorial Overview
 ---
-## Getting started
+<h2 align="center">Tutorial Overview</h2>
 
-PlantCV is composed of modular functions in order to be applicable to a variety of plant types and imaging systems.
-In the following documentation we will describe use of each function and provide tutorials on how each function is used in the context of an overall image-processing pipeline.
-The initial release of PlantCV contains base functions that are required to examine images from an excitation imaging fluorometer, visible spectrum camera, and near-infrared camera.
-We are continuing to develop PlantCV and encourage input from the greater plant phenomics community.
-Please post questions and comments [HERE](https://github.com/nfahlgren/plantcv).
+<br>
+The following are tutorials of "mostly" (we reserve the right to tinker) finished DDPSC Maker Group Projects.
+Tutorials are written by more than one Maker Group Member, so there will be differences in style etc. <br><br>
+Constructive comments are encouraged. To keep up on projects-in-progress check out our [blog](http://maker.danforthcenter.org/pages/blog/) and follow us on [twitter](https://twitter.com/ddpscmaker).
+</br>
+
+
