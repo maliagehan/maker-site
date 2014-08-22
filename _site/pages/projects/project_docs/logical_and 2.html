@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css" />  
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap-theme.min.css" />  
+    <link rel="stylesheet" type="text/css" href="/stylesheets/pygment_trac.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/custom.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/bootstrap.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>The Maker Group</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1><a href="https://maliagehan.github.io/maker-site" target="blank"><font color="white">THE MAKER GROUP</font></a></h1>
+        <h2><a href="http://danforthcenter.org" target="blank"><font color="white">DONALD DANFORTH PLANT SCIENCE CENTER</font></a></h2>
+        <a href="https://github.com/maliagehan/maker-site" class="button"><small>View On</small>GitHub</a>
+      </div>
+    </header>
+    
+  <!--Static navbar-->
+<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="nav">
+            <a href="/index.html">Home</a>
+          <li class="nav">
+            <a href="/pages/about.html">About</a>
+          <li class="nav">
+            <a href="/pages/events.html"">Events</a>
+          <li class="nav">
+            <a href="/pages/projects">DDPSC Projects</a>
+          <li class="nav">
+            <a href="/pages/about.html">Blog</a>
+          <li class="nav">
+            <a href="/pages/about.html">Tutorials</a>
+          <li class="nav">
+            <a href="/pages/about.html">Resources</a>
+          <li class="nav">
+            <a href="/pages/about.html">Outreach</a>
+          <li class="nav">
+            <a href="/pages/about.html">Members</a>
+          <li class="nav">
+            <a href="/pages/about.html">Contact</a>
+          </li>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+          </form>
+          </div>
+        </ul>
+      </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 col-md-2 sidebar">
+      <ul class="nav nav-sidebar">
+        <li class="nav"><a href="/pages/documentation">Getting started</a></li>
+        <li class="nav"><a href="/pages/documentation/function_docs/installation.html">Installation</a></li>
+        <li class="nav"><a href="/pages/documentation/function_docs/read_image.html">Read Image</a></li>
+        <li class="nav"><a href="/pages/documentation/function_docs/print_image.html">Print Image</a></li>
+        <li class="nav"><a href="/pages/documentation/function_docs/rgb2hsv.html">RGB to HSV</a></li>
+        <li class="nav"><a href="/pages/documentation/function_docs/rgb2lab.html">RGB to LAB</a></li>        
+        <li class="nav"><a href="/pages/documentation/function_docs/binary_threshold.html">Binary Threshold</a></li>
+        <li class="nav"><a href="/pages/documentation/function_docs/median_blur.html">Median Blur</a></li>
+        <li class="nav"><a href="/pages/documentation/function_docs/fill.html">Fill</a></li>      
+        <li class="nav"><a href="/pages/documentation/function_docs/logical_and.html">Logical Operations-And</a></li>
+        <li class="nav"><a href="/pages/documentation/function_docs/logical_or.html">Logical Operations-Or</a></li>                    
+        <li class="nav"><a href="/pages/documentation/function_docs/apply_mask.html">Apply Mask</a></li>
+        <li class="nav"><a href="/pages/documentation/function_docs/find_objects.html">Find Objects</a></li>
+        <li class="nav"><a href="/pages/documentation/function_docs/roi.html">Region of Interest- Define</a></li>
+        <li class="nav"><a href="/pages/documentation/function_docs/roi_objects.html">Region of Interest- Objects</a></li>
+        <li class="nav"><a href="/pages/documentation/function_docs/object_composition.html">Combine Objects</a></li>
+        <li class="nav"><a href="/pages/documentation/function_docs/analyze_shape.html">Analyze Shapes</a></li>
+        <li class="nav"><a href="/pages/documentation/function_docs/boundary_tool.html">Boundary Tool</a></li>
+        <li class="nav"><a href="/pages/documentation/function_docs/analyze_color.html">Analyze Color</a></li>                
+      </ul>
+    </div>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <h1>Documentation</h1>
+      <div class="jumbotron">  
+  <h2>Logical Operations - And</h2>
+
+<p>Join two images using the bitwise AND operator. Images must be the same size. This is a wrapper for the Opencv Function <a href="http://docs.opencv.org/modules/core/doc/operations_on_arrays.html">bitwise_and</a>.  </p>
+
+<p><font color='blue'><b>logical_and(img1, img2, device, debug=False)</font></b><br>
+<font color='orange'><strong>returns</strong></font> device, &#39;and&#39; image</p>
+
+<ul>
+<li><p><strong>Parameters:</strong>   </p>
+
+<ul>
+<li>img1 - image object 1.</li>
+<li>img2 - image object 2.</li>
+<li>device - Counter for image processing steps</li>
+<li>debug- Default value is False, if True, intermediate image will be printed </li>
+</ul></li>
+<li><p><strong>Context:</strong>  </p>
+
+<ul>
+<li>Used to combine to images. Very useful when combining image channels that have been thresholded seperately.</li>
+</ul></li>
+<li><p><strong>Example use:</strong>  </p>
+
+<ul>
+<li><a href="">Use In Tutorial</a></li>
+</ul>
+<div class="highlight"><pre><code class="python language-python" data-lang="python"><span class="kn">import</span> <span class="nn">plantcv</span> <span class="kn">as</span> <span class="nn">pcv</span>
+
+<span class="c"># Combine two images that have had different thresholds applied to them. For logical &#39;and&#39; operation object pixel must be in both images to be included in &#39;and&#39; image.</span>
+
+<span class="n">device</span><span class="p">,</span> <span class="n">and_image</span> <span class="o">=</span> <span class="n">pcv</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">s_threshold</span><span class="p">,</span> <span class="n">b_threshold</span><span class="p">,</span> <span class="n">device</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">debug</span><span class="p">)</span>
+</code></pre></div>
+<p><a href="/img/documentation_images/logical_and/5_fill0.png" target="_blank">
+<img src="/img/documentation_images/logical_and/5_fill0.png" width="200"></a>
+<a href="/img/documentation_images/logical_and/9_fill150.png" target="_blank">
+<img src="/img/documentation_images/logical_and/9_fill150.png" width="200"></a>
+<a href="/img/documentation_images/logical_and/10_and_joined.png" target="_blank">
+<img src="/img/documentation_images/logical_and/10_and_joined.png" width="200"></a><br>
+Figure 1. (Left) Original image 1. (Middle) Original image 2.(Right) Image combined with logical &#39;and&#39; operation.  </p></li>
+</ul>
+
+      </div>
+  
+  <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try {
+      var pageTracker = _gat._getTracker("UA-51735493-2");
+    pageTracker._trackPageview();
+    } catch(err) {}
+  </script>
+  <script type="text/javascript">
+    $('.nav a:contains(Documentation)').parent().addClass('active');
+    $('.nav a:contains(Logical Operations-And)').parent().addClass('active');
+  </script>
+  <footer>
+    <p>&copy; Donald Danforth Plant Science Center 2014</p>
+  </footer>
+</div>
+
+    </div>
+  </div>
+
+  </body>
+</html>
