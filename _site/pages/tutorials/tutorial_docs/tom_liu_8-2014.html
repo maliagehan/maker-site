@@ -89,6 +89,91 @@
 
 <h3 align="center">by Tom Liu (STARS Summer Intern) and Dmitri Nusinow</h3>
 
+<p><br>
+<b>Setting up Raspberry Pi:</b>  </p>
+
+<p>1. Open the Raspberry Pi Complete Starter Kit and take out its contents.
+</p>
+
+<p>2. Insert the Noobs Preloaded SD Card 8Gb, Ethernet cable, USB mouse, USB keyboard and a HDMI Cable into the right ports.
+</p>
+
+<p>3. Connect the HDMI Cable into the monitor (you may need a HDMI to VGA/DVI adapter depending on the monitor.)
+</p>
+
+<p>4. Internet connection is not required, however, if you want internet, plug in an Ethernet cable to the Raspberry Pi.
+</p>
+
+<p>5. Plug in the Micro USB Power Supply, Pi will start automatically.
+</p>
+
+<p>6. If this is the first time you are using the Pi, then load Raspbian OS.
+</p>
+
+<p>7. The after it is finished, click OK. The Pi will reboot (if not, reboot the Pi (unplug and replug in) and take you to the Raspberry Pi Software Configuration tool (raspi-config).
+</p>
+
+<p>8. Setup Options to change: enable camera, change password, set to local timezone.
+</p>
+
+<p>9. The default username and password is pi and raspberry.
+</p>
+
+<p><b><font color="orange">Note:</font></b> Do not be alarmed when no writing appears when you are typing in the password, this is just a security feature of Linux. However, to change the password, type in the command:
+</p></p>
+<div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="n">sudo</span> <span class="n">raspi</span><span class="o">-</span><span class="n">config</span> 
+</code></pre></div>
+<p><a href="/images/tutorial_imgs/tom_liu_8-21-14/img1.png" target="_blank">
+<img src="/images/tutorial_imgs/tom_liu_8-21-14/img1.png" align="center" width="600"></a><br></p>
+
+<p>
+10. After you have successfully logged in, the command line prompt should read: 
+</p>
+<div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="n">pi</span><span class="nd">@raspberrypi</span><span class="o">~</span><span class="err">$</span> 
+</code></pre></div>
+<p><br>
+<b>Setting the Time and Date on your Raspberry Pi.</b></p>
+
+<p>  
+<b><font color="orange">Note:</font></b> The Rasberry Pi does not have a very accurate clock, so the time needs to be reset and coordinated frequently to avoid drift. To set the date:
+</p>
+
+<p>
+1. Type the following:
+</p>
+<div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="c">#sudo date -s Day Of Week Month Day Hours:Minutes:Seconds Timezone Year</span>
+    <span class="c">#for example if it is 07/11/2014 at 11:59:30 on Friday in the Central timezone:</span>
+
+    <span class="n">sudo</span> <span class="n">date</span> <span class="o">-</span><span class="n">s</span> <span class="n">Fri</span> <span class="n">Jul</span> <span class="mi">11</span> <span class="mi">11</span><span class="p">:</span><span class="mi">59</span><span class="p">:</span><span class="mi">30</span> <span class="n">CDT</span> <span class="mi">2014</span>
+</code></pre></div>
+<p>
+2. This will update the time. If the Raspberry Pi reboots, check the time and date using the command:
+</p>
+<div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="n">date</span>
+</code></pre></div>
+<p><br>
+<b>Setting up the Raspberry Pi camera</b></p>
+
+<p>We followed instructions that can be found <a href="http://thepihut.com/pages/how-to-install-the-raspberry-pi-camera">here</a></p>
+
+<p>1. Open up your Raspberry Pi Camera module. Be aware that the camera can be damaged by static electricity. Before removing the camera from its grey anti-static bag, make sure you have discharged yourself by touching a grounded object (e.g. a radiator or PC Chassis).
+</p>
+
+<p>2. Install the Raspberry Pi Camera module by inserting the cable into the Raspberry Pi. The cable slots into the connector situated between the Ethernet and HDMI ports, with the silver connectors facing the HDMI port.1
+</p>
+
+<p>3. Boot up your Raspberry Pi.
+</p>
+
+<p>4. To take a photo, enter the command:  
+</p>
+<div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="n">raspistill</span> <span class="o">-</span><span class="n">o</span> <span class="n">image</span><span class="o">.</span><span class="n">jpg</span>
+</code></pre></div>
+<p>5. The picture is now in your home folder, "labeled image.jpg"
+</p>
+
+<p><b><font color="green">Optional:</font></b> If you did not enable the camera option after installing the OS and running raspi-config for the first time.</p>
+
         </div>
     </div>
 
