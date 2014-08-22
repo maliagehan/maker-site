@@ -140,20 +140,20 @@ We followed instructions that can be found [here](http://thepihut.com/pages/how-
 
 <p>1. We use a 730 nm cutoff filter (Lee #87) to block visible light when combining the NoIR camera with an 880 nm LED array to image plants under diurnal cycles. The cutoff filter helps prevent changes in contrast during imaging, making image processing easier.
 </p>
-<p><b><font color="orange">Note:</font></b> If you are using a camera holder See [here](http://www.thingiverse.com/thing:256960) for a Raspberry Pi case and Camera holder with ball joint, we just tape the filter over the hole for the camera.
-
+<b><font color="orange">Note:</font></b> If you are using a camera holder See [here](http://www.thingiverse.com/thing:256960) for a Raspberry Pi case and Camera holder with ball joint, we just tape the filter over the hole for the camera. 
+<br>
 <a href="{{site.baseurl}}/images/tutorial_imgs/tom_liu_8-21-14/img2.png" target="_blank">
 <img src="{{site.baseurl}}/images/tutorial_imgs/tom_liu_8-21-14/img2.png" align="center" width="400"></a><br>
 Figure 1. Raspberry Pi with 730nm cutoff filter over lens. 
-
-
-<b><font color="green">Optional:</font></b> 3D Print a computer and camera case
+<br>
+<p><b><font color="green">Optional:</font></b> 3D Print a computer and camera case
+</p>
 
 Again, See [here](http://www.thingiverse.com/thing:256960) for a Raspberry Pi case and Camera holder with ball joint
 
 <b><font color="green">Optional:</font></b> Disabling LED light in camera
 
-<p>1. If you are imaging plants, then the red light on the camera could cause unwanted responses. To turn off the LED, add the command to the <b>config.txt file</b>.:
+<p>1. If you are imaging plants, then the red light on the camera could cause unwanted responses. To turn off the LED, add the command to the <b>config.txt file</b>:
 </p>
 
   ```python
@@ -161,18 +161,21 @@ Again, See [here](http://www.thingiverse.com/thing:256960) for a Raspberry Pi ca
   ```
   
 <p><b><font color="orange">Note:</font></b> To edit the config.txt file you can use Nano:
+</p>
 
   ```python
     sudo nano /boot/config.txt
   ```
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Use the arrow keys to scroll to the end of the file and add to the last line:
+<p>1. Use the arrow keys to scroll to the end of the file and add to the last line:
+</p>
 
   ```python
     disable_camera_led=1
   ```
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Press CTRL-x to quit. If prompted press Y followed by Return or Enter.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. After you reboot the camera the red LED will be disabled. Reboot with the following:
+<p>2. Press CTRL-x to quit. If prompted press Y followed by Return or Enter.
+</p>
+<p>3. After you reboot the camera the red LED will be disabled. Reboot with the following:
+</p>
 
   ```python
     sudo reboot
@@ -182,13 +185,17 @@ Again, See [here](http://www.thingiverse.com/thing:256960) for a Raspberry Pi ca
 <a href="{{site.baseurl}}/images/tutorial_imgs/tom_liu_8-21-14/img3.png" target="_blank">
 <img src="{{site.baseurl}}/images/tutorial_imgs/tom_liu_8-21-14/img3.png" align="center" width="400"></a><br>
 Figure 2. LEDs covered with puffy black fabric paint.
+<br>
 
-<b>Time lapse imaging:</b>
+<p><b>Time lapse imaging:</b>
+</p>
 
 There are many methods to setting up timelapse imaging on the Raspberry Pi, and the one that we use is to set up a crontab job. This is essentially a script that will run in the background, and take a picture at a prescribed minute/hour/day/month/and day of week.
 To edit crontab:
 
   ```python
-    sudo reboot
+    crontab -e
   ```
+<p>1. Use the arrow keys to go to the bottom of the page after the # signs
+</p>
 
