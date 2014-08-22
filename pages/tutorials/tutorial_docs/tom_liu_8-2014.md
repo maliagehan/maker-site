@@ -3,10 +3,16 @@ layout: tutorials
 title: RasPi Imager
 subtitle: RasPi Imager
 ---
+
 <h2 align="center">Meter-Made: Raspberry Pi Imaging Station Tutorial</h2>
 
 <h3 align="center">by Tom Liu (STARS Summer Intern) and Dmitri Nusinow</h3>
 <br>
+
+<a href="{{site.baseurl}}/images/tutorial_imgs/tom_liu_8-21-14/img7.png" target="_blank">
+<img src="{{site.baseurl}}/images/tutorial_imgs/tom_liu_8-21-14/img7.png" align="center" width="600"></a><br>
+<br>
+
 <b>Setting up Raspberry Pi:</b>  
 
 <p>1. Open the Raspberry Pi Complete Starter Kit and take out its contents.
@@ -181,7 +187,7 @@ Again, See [here](http://www.thingiverse.com/thing:256960) for a Raspberry Pi ca
     sudo reboot
   ```
 <p><b><font color="orange">Note:</font></b> There is not a way to disable the LEDs on the circuit board of the Raspberry Pi itself, however, puffy black fabric paint is opaque and can be used to block light from the board.
-
+<br>
 <a href="{{site.baseurl}}/images/tutorial_imgs/tom_liu_8-21-14/img3.png" target="_blank">
 <img src="{{site.baseurl}}/images/tutorial_imgs/tom_liu_8-21-14/img3.png" align="center" width="400"></a><br>
 Figure 2. LEDs covered with puffy black fabric paint.
@@ -196,6 +202,126 @@ To edit crontab:
   ```python
     crontab -e
   ```
-<p>1. Use the arrow keys to go to the bottom of the page after the # signs
+<p>1. Use the arrow keys to go to the bottom of the page after the # signs, then:
 </p>
 
+  ```python
+  # The following will take a picture each twenty minutes, each hour, each day, each month, each day of the week, and save a file into the home directory labeled with the date (YYYYMMDDHHMM_timelapse.jpg will be the format).
+  
+    /20 * * * * /usr/bin/raspistill -o /home/pi/$(date+"\%Y\%m\%d\%H\%M")_timelapse.jpg
+  ```
+  
+<p>2. Type <b>command-X</b> to exit, and press yes to save and overwrite current crontab job
+</p>
+
+<p>3. Now the system will take a picture each twenty minutes. The above line can be edited to change time of the picture, options on the camera (e.g. quality, white balance, exposure, rotation, etc), location of where the pictures are saved (you may want to save to a specific folder).
+</p>
+
+<b>Setting up 880nm LED array (32 LED array)</b>
+
+<a href="{{site.baseurl}}/images/tutorial_imgs/tom_liu_8-21-14/img4.png" target="_blank">
+<img src="{{site.baseurl}}/images/tutorial_imgs/tom_liu_8-21-14/img4.png" align="center" width="400"></a><br>
+Figure 3. Front of LED array.
+<br>
+
+For plant imaging, we use OSRAM SFH485 T1 3/4 INFRARED 880nm LEDs connected 8 in serial with a 1 Ohm 1/4 Watt Resistor. We connect four serial arrays in parallel to a 12 volt power supply. We use a modular 2 Amp, 12V/5V AC/DC Power adapter with 4 pin molex connector, and a ZM-MC1 multi-connector where the plastic connector for the 12V output has been removed to expose the pins for soldering
+
+<p>1. Set up a prototype on a breadboard and arrange the 1 Ohm 1/4 Watt Resistors and OSRAM SFH485 T1 3/4 INFRARED 880nm LEDs so that the resistors are connected in a parallel circuit with each individual resistor in series with 8 LEDs.  (Note: on the OSRAM LEDs, the short arm is the cathode, and long arm is the anode)
+</p>
+<p>2. Test the prototype and use the Raspberry Pi camera with the attached filter to ensure that the LEDs and design is working.
+</p>
+<p>3. Transfer the prototype onto a Microtivity IM408 Double-sided Prototyping Board array and fashion it so that the LEDs are in a 4 x 8 manner in a regular array. Take careful notice of where the positive and negative wires of the LEDs are placed, as a positive end must connect to the negative end of another LED. The resistor is not directional, make sure that there is one per serial 8 LED array. 
+</p>
+<p>4. Solder the 12V output of the Zalman ZM-MC1 Multi-connector to connect the Power Adapter to the parallel array of 32 LEDs.
+</p>
+
+<a href="{{site.baseurl}}/images/tutorial_imgs/tom_liu_8-21-14/img5.png" target="_blank">
+<img src="{{site.baseurl}}/images/tutorial_imgs/tom_liu_8-21-14/img5.png" align="center" width="400"></a><br>
+Figure 4. Back of LED array.
+<br>
+
+<p>5. Again use the Raspberry Pi camera to make sure that the soldering was effective and the lighting system is functional.
+</p>
+<p>6. Use multiple layers of Roscolux Diffusion 111: Tough Rolux diffusion film to eliminate the spotlighting from the LED array.
+</p>
+<p>7. Use the Raspberry Pi camera to test to your whether to add or remove diffusion film layers.
+</p>
+
+<a href="{{site.baseurl}}/images/tutorial_imgs/tom_liu_8-21-14/img6.png" target="_blank">
+<img src="{{site.baseurl}}/images/tutorial_imgs/tom_liu_8-21-14/img6.png" align="center" width="400"></a><br>
+Figure 5. LED array with Diffuser on top of power supply which doubles as a stand. 
+<br>
+
+<b><font color="green">Optional:</font></b> Cycle timer to coordinate turning on LED array with imaging. 
+<br>	
+There are many ways to trigger the LED arrays when imaging. The simplest is to use a cycle timer to turn on the array coincidentally with imaging. We use a CT-1 Digital Recycle Timer (Innovative Grower), which will turn on the lights for 10sec to 99 hours and then turn them off for 10sec to 99 hours. These timers have a small amount of drift, but if you re-coordinate the timer with your Raspberry Pi at the beginning of the experiment, it can work well. 
+
+<b>Setup of imaging station</b>
+
+<p>1. If you are going to backlight your plants (if they are growing on tissue culture plates or in solo cups) place the plants between your Pi imaging system (at the proper distance from the lens so that the plants/seedlings are in focus) and the LED array.
+</p>
+
+<b><font color="orange">Note:</font></b> If you are using plants in plates, you can use a plate holder to keep the plates vertical. 3D print instructions [here](http://www.thingiverse.com/thing:418614).
+
+<p>2. If you are going to do any time lapse, secure the camera and plants/plates with tape to minimize vibration issues during imaging.
+</p>
+
+<a href="{{site.baseurl}}/images/tutorial_imgs/tom_liu_8-21-14/img7.png" target="_blank">
+<img src="{{site.baseurl}}/images/tutorial_imgs/tom_liu_8-21-14/img7.png" align="center" width="600"></a><br>
+Figure 6. Backlight imaging set up.
+<br>
+
+<b>Liquid sterilization</b>
+
+<p>1. Aliquot desired amount of seeds (typically 18-100) into labeled 1.5 mL tubes.
+</p>
+<p>2. 500 uL of 50% bleach/0.02% Triton X-100 to each tube.
+</p>
+<p>3. Rotate tubes on a tube rotator or by hand for exactly 5 minutes.
+</p>
+<p>4. Spin down at ~1000x g & pipet off all liquid using a 1 mL tip with a 10uL tip added on the end.
+</p>
+<p>5. Add 1mL of Sterile H2O and rotate or flick the tube to rinse seeds of bleach.
+</p>
+<p>6. Repeat steps 4 & 5 at least 3 more times or until bleach smell dissipates.
+</p>
+<p>7. In the hood, plate the seeds the appropriate media plates, i.e. 1/2 X MS media. 
+</p>
+<p>8. Seal all plates with 3M surgical tape. 
+</p>
+<p>9. Wrap stacks of plates in aluminum foil and place at 4&deg;C for approximately 2 days to stratify the seeds. 
+</p>
+<p>10. Transfer to a controlled environment chamber.
+</p>
+
+<b>Measuring Hypocotyl Length</b>
+
+<p>1. Transfer files from Raspberry Pi to a folder that will contain only the images to be analyzed (e.g. 72 hours worth of images)
+</p>
+<b><font color="orange">Note:</font></b> If Fiji is not downloaded onto your computer, do so now by going [here](http://fiji.sc/Fiji).
+
+<p>2. Using Fiji, go to file > Import > Image sequence and select the folder of images that you would like to analyze.
+</p>
+<p>3. Go to Analyze > Set Scale. Use ruler in image to set the measurement scale to mm.
+</p>
+<p>4. Go to Analyze > Set Measurements. Chose Bounding Rectangle, Stack Position, Invert Y coordinates.
+</p>
+<p>5. Use Straight tool, select segmented line.
+</p>
+<p>6. Left Click on Root/Hypocotyl junction, then click line that lies in the center of the hypocotyl ending with a right click at hypocotyl/Cotyledon junction. You should have a line accurately measures hypocotyl.
+</p>
+<p>7. Go to Analyze > Measure (Use Command M).
+</p>
+<p>8. Advance to next image, repeat 7 and 8 on the same seedling until all images are analyzed.
+</p>
+<p>9. Save Data to spreadsheet. 
+</p>
+<p>10. Go to Analyze > Clear results.
+</p>
+<p>11. Repeat 7-11 on new seedling. 
+</p>
+<p>12. Do for all seedlings.
+</p>
+<p>13. Each measurement will need to be assigned a time of capture.
+</p>
+<p>14. Plot Length vs time. 
