@@ -1,7 +1,7 @@
 ---
 layout: projects
-title: Projects
-subtitle: DDPSC Projects
+title: 2014 Overview
+subtitle: 2014 Overview
 ---
 <h2 align="center">2014 Maker Projects at the Danforth Center</h2>
 
