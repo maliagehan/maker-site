@@ -97,10 +97,98 @@ We followed instructions that can be found [here](http://thepihut.com/pages/how-
   ```python
     sudo raspi-config
     
-    #If the "camera" option is not listed, you will need to run a few commands to update your Raspberry Pi.
+    #If the "camera" option is not listed, you will need to update your Raspberry Pi:
     
     sudo apt-get update
     sudo apt-get upgrade
 
+  ```
+<p>2. From the prompt, run: 
+</p>
+
+  ```python
+    sudo raspi-config
+    
+    #you should now see the "camera" option.
+  ```
+  
+<p>3. Navigate to the camera option, and enable it. Select Finish and reboot your Raspberry Pi.
+</p>
+
+<b><font color="green">Optional:</font></b> Changing focus of the camera  
+
+<p>See video from George Wang:
+</p>
+<iframe width="560" height="315" src="//www.youtube.com/embed/u6VhRVH3Z6Y?rel=0" frameborder="0" allowfullscreen></iframe>
+<br>
+<p>1. The Raspberry Pi camera's focus is initially set to infinite, if you want a different focus it takes precision and special care.
+</p>
+<p>2. To change the focus, use a sharp object and carefully remove the glue around the lens.
+</p>
+<p>3. Every few incisions with the sharp edge carefully turn the lens counter clockwise with some tweezers to check if it will turn.
+</p>
+<p>4. When it does turn, use the following command to check the focal length:
+</p>
+
+  ```python
+    raspistill -o image.jpg
+  ```
+<p><b><font color="orange">Note:</font></b> It is suggested to use a ruler and place the camera at one end of the ruler. Place an object at the desired distance (we use a business card to look for fine detail) and adjust the focus until sharp.
+</p>
+
+<b><font color="green">Optional:</font></b> Cutoff filters
+
+<p>1. We use a 730 nm cutoff filter (Lee #87) to block visible light when combining the NoIR camera with an 880 nm LED array to image plants under diurnal cycles. The cutoff filter helps prevent changes in contrast during imaging, making image processing easier.
+</p>
+<p><b><font color="orange">Note:</font></b> If you are using a camera holder See [here](http://www.thingiverse.com/thing:256960) for a Raspberry Pi case and Camera holder with ball joint, we just tape the filter over the hole for the camera.
+
+<a href="{{site.baseurl}}/images/tutorial_imgs/tom_liu_8-21-14/img2.png" target="_blank">
+<img src="{{site.baseurl}}/images/tutorial_imgs/tom_liu_8-21-14/img2.png" align="center" width="400"></a><br>
+Figure 1. Raspberry Pi with 730nm cutoff filter over lens. 
+
+
+<b><font color="green">Optional:</font></b> 3D Print a computer and camera case
+
+Again, See [here](http://www.thingiverse.com/thing:256960) for a Raspberry Pi case and Camera holder with ball joint
+
+<b><font color="green">Optional:</font></b> Disabling LED light in camera
+
+<p>1. If you are imaging plants, then the red light on the camera could cause unwanted responses. To turn off the LED, add the command to the <b>config.txt file</b>.:
+</p>
+
+  ```python
+    disable_camera_led=1
+  ```
+  
+<p><b><font color="orange">Note:</font></b> To edit the config.txt file you can use Nano:
+
+  ```python
+    sudo nano /boot/config.txt
+  ```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Use the arrow keys to scroll to the end of the file and add to the last line:
+
+  ```python
+    disable_camera_led=1
+  ```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Press CTRL-x to quit. If prompted press Y followed by Return or Enter.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. After you reboot the camera the red LED will be disabled. Reboot with the following:
+
+  ```python
+    sudo reboot
+  ```
+<p><b><font color="orange">Note:</font></b> There is not a way to disable the LEDs on the circuit board of the Raspberry Pi itself, however, puffy black fabric paint is opaque and can be used to block light from the board.
+
+<a href="{{site.baseurl}}/images/tutorial_imgs/tom_liu_8-21-14/img3.png" target="_blank">
+<img src="{{site.baseurl}}/images/tutorial_imgs/tom_liu_8-21-14/img3.png" align="center" width="400"></a><br>
+Figure 2. LEDs covered with puffy black fabric paint.
+
+<b>Time lapse imaging:</b>
+
+There are many methods to setting up timelapse imaging on the Raspberry Pi, and the one that we use is to set up a crontab job. This is essentially a script that will run in the background, and take a picture at a prescribed minute/hour/day/month/and day of week.
+To edit crontab:
+
+  ```python
+    sudo reboot
   ```
 
