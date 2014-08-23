@@ -10,7 +10,7 @@ subtitle: PlantCV
 <a href="{{site.baseurl}}/images/plantcv/test.png_shapes.png" target="_blank">
 <img src="{{site.baseurl}}/images/plantcv/test.png_shapes.png" align="center" height="250"></a><br>
 
-For documentation and download of PlantCV go [here](http://plantcv.danforthcenter.org/)
+For for more information, documentation, and download of PlantCV go [here](http://plantcv.danforthcenter.org/)
 
 PlantCV is an imaging processing package specific for plants
 that is built upon open-source software platforms <a href="http://opencv.org/">OpenCV</a> <sup>1</sup>,
