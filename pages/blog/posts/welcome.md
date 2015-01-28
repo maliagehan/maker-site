@@ -40,7 +40,8 @@ The Maker Group at the Donald Danforth Plant Science Center is a forum for all m
 10.  **Learn to solder with DDPSC! (with parent permission):** Solder your very own light-up badge (or have us help you).  
 
 *********************************************************
-**We hope to make this a regular event. If you have suggestions we'd love to hear them. Please fill out a post-event survey, visit our Pi-powered comment station, or email us at** <a href="mailto:ddpsc.maker@gmail.com"><b>ddpsc.maker@gmail.com</b></a>
+**We hope to make this a regular event. If you have suggestions we'd love to hear them. Please fill out a post-event survey, visit our Pi-powered comment station, or email us at:**
+<a href="mailto:ddpsc.maker@gmail.com"><b>ddpsc.maker@gmail.com</b></a>
 
 <br>
 <br>
