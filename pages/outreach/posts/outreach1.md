@@ -4,7 +4,7 @@ title: Raspberry Pi Education Funds
 subtitle: Raspberry Pi Education Funds
 ---
 
-##2/27/15: DDPSC Maker Group + The Raspberry Pi Education
+##DDPSC Maker Group + The Raspberry Pi Education
 
 We are very excited (VERY) to have recieved support from both the [Danforth Center](http://www.danforthcenter.org/)
 and the [Raspberry Pi Education Foundation](http://www.raspberrypi.org/education-fund/) for a number of education and outreach activities in 2015.
