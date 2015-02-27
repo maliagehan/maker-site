@@ -89,7 +89,7 @@
         <div class="jumbotron"> 
         <h2 align="center">Meter-Made: Raspberry Pi LED Illumination and Imaging Station Tutorial</h2>
 
-<h3 align="center">by Allison Tielking (Winter 2014 MICDS Highschool Intern) and Dmitri Nusinow</h3>
+<h3 align="center">by Allison Tielking (Winter 2014 MICDS Highschool Intern), Tom Liu (2014 Summer STARS student) and Dmitri Nusinow</h3>
 
 <p><br></p>
 
@@ -108,12 +108,14 @@
     <li><a href="#op-led">Option: Disable camera LED</a>
   </ul>  </p>
 
-<p><li><a href="#time-lapse">Time-Lapse Imaging</a></li></p>
-
 <p><li><a href="#led-array">Setting up LED array</a></li>
     <ul>
-      <li><a href="#op-cycletimer">Option: Cycle Timer</a></li>
+      <li><a href="#MOSFET">Using a MOSFET Transistor to Control Array</a></li>
+      <li><a href="#install_GPIO">Installing GPIO</a></li>
+      <li><a href="#camera.sh">Coordinating imaging and turning on LED lights through GPIO</a></li>
     </ul></p>
+
+<p><li><a href="#time-lapse">Time-Lapse Imaging</a></li></p>
 
 <p><li><a href="#station">Setting up imaging station</a></li></p>
 
@@ -156,8 +158,8 @@
 </p></p>
 <div class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">sudo</span> <span class="n">raspi</span><span class="o">-</span><span class="n">config</span> 
 </code></pre></div>
-<p><a href="/images/tutorial_imgs/tom_liu_8-21-14/img1.png" target="_blank">
-<img src="/images/tutorial_imgs/tom_liu_8-21-14/img1.png" align="center" width="600"></a><br></p>
+<p><a href="/images/tutorial_imgs/Allison_Tielking_2_2015/img1.png" target="_blank">
+<img src="/images/tutorial_imgs/Allison_Tielking_2_2015/img1.png" align="center" width="600"></a><br></p>
 
 <p>
 10. After you have successfully logged in, the command line prompt should read: 
@@ -255,8 +257,8 @@
 
 <p><b><font color="orange">Note:</font></b> If you are using a camera holder See <a href="http://www.thingiverse.com/thing:256960">here</a> for a Raspberry Pi case and Camera holder with ball joint, we just tape the filter over the hole for the camera. 
 <br>
-<a href="/images/tutorial_imgs/tom_liu_8-21-14/img2.png" target="_blank">
-<img src="/images/tutorial_imgs/tom_liu_8-21-14/img2.png" align="center" width="400"></a><br>
+<a href="/images/tutorial_imgs/Allison_Tielking_2_2015/img2.png" target="_blank">
+<img src="/images/tutorial_imgs/Allison_Tielking_2_2015/img2.png" align="center" width="400"></a><br>
 Figure 1. Raspberry Pi with 730nm cutoff filter over lens. 
 <br>
 <p><b><font color="green">Optional:</font></b> 3D Print a computer and camera case. <a href="#contents">back to top</a>
@@ -288,33 +290,15 @@ Figure 1. Raspberry Pi with 730nm cutoff filter over lens.
 <p><b><font color="orange">Note:</font></b> There is not a way to disable the LEDs on the circuit board of the Raspberry Pi itself, however, puffy black fabric paint is opaque and can be used to block light from the board.
 <br></p>
 
-<p><a href="/images/tutorial_imgs/tom_liu_8-21-14/img3.png" target="_blank">
-<img src="/images/tutorial_imgs/tom_liu_8-21-14/img3.png" align="center" width="400"></a><br>
+<p><a href="/images/tutorial_imgs/Allison_Tielking_2_2015/img3.png" target="_blank">
+<img src="/images/tutorial_imgs/Allison_Tielking_2_2015/img3.png" align="center" width="400"></a><br>
 Figure 2. LEDs covered with puffy black fabric paint.
 <br></p>
 
-<p><a id="time-lapse"></a><b>Time lapse imaging.</b> <a href="#contents">back to top</a></p>
-
-<p>There are many methods to setting up timelapse imaging on the Raspberry Pi, and the one that we use is to set up a crontab job. This is essentially a script that will run in the background, and take a picture at a prescribed minute/hour/day/month/and day of week.
-To edit crontab:  </p>
-<div class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">crontab</span> <span class="o">-</span><span class="n">e</span>
-</code></pre></div>
-<p>1. Use the arrow keys to go to the bottom of the page after the # signs, then:
-</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python">  <span class="c"># The following will take a picture each twenty minutes, each hour, each day, each month, each day of the week, and save a file into the home directory labeled with the date (YYYYMMDDHHMM_timelapse.jpg will be the format).</span>
-
-    <span class="o">/</span><span class="mi">20</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">raspistill</span> <span class="o">-</span><span class="n">o</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">pi</span><span class="o">/</span><span class="err">$</span><span class="p">(</span><span class="n">date</span><span class="o">+</span><span class="s">&quot;\%Y\%m\</span><span class="si">%d</span><span class="s">\%H\%M&quot;</span><span class="p">)</span><span class="n">_timelapse</span><span class="o">.</span><span class="n">jpg</span>
-</code></pre></div>
-<p>2. Type <b>command-X</b> to exit, and press yes to save and overwrite current crontab job
-</p>
-
-<p>3. Now the system will take a picture each twenty minutes. The above line can be edited to change time of the picture, options on the camera (e.g. quality, white balance, exposure, rotation, etc), location of where the pictures are saved (you may want to save to a specific folder).
-</p>
-
 <p><a id="led-array"></a><b>Setting up 880nm LED array (32 LED array). </b> <a href="#contents">back to top</a></p>
 
-<p><a href="/images/tutorial_imgs/tom_liu_8-21-14/img4.png" target="_blank">
-<img src="/images/tutorial_imgs/tom_liu_8-21-14/img4.png" align="center" width="400"></a><br>
+<p><a href="/images/tutorial_imgs/Allison_Tielking_2_2015/img4.png" target="_blank">
+<img src="/images/tutorial_imgs/Allison_Tielking_2_2015/img4.png" align="center" width="400"></a><br>
 Figure 3. Front of LED array.
 <br></p>
 
@@ -329,11 +313,11 @@ Figure 3. Front of LED array.
 <p>3. Transfer the prototype onto a Microtivity IM408 Double-sided Prototyping Board array and fashion it so that the LEDs are in a 4 x 8 manner in a regular array. Take careful notice of where the positive and negative wires of the LEDs are placed, as a positive end must connect to the negative end of another LED. The resistor is not directional, make sure that there is one per serial 8 LED array. 
 </p>
 
-<p>4. Solder the 12V output of the Zalman ZM-MC1 Multi-connector to connect the Power Adapter to the parallel array of 32 LEDs.
+<p>4. Solder the 12V output of the Zalman ZM-MC1 Multi-connector to connect the Power Adapter to the parallel array of 32 LEDs. (note: do not solder the ground yet if you want to use the Pi to control illumination.)
 </p>
 
-<p><a href="/images/tutorial_imgs/tom_liu_8-21-14/img5.png" target="_blank">
-<img src="/images/tutorial_imgs/tom_liu_8-21-14/img5.png" align="center" width="400"></a><br>
+<p><a href="/images/tutorial_imgs/Allison_Tielking_2_2015/img5.png" target="_blank">
+<img src="/images/tutorial_imgs/Allison_Tielking_2_2015/img5.png" align="center" width="400"></a><br>
 Figure 4. Back of LED array.
 <br></p>
 
@@ -346,14 +330,114 @@ Figure 4. Back of LED array.
 <p>7. Use the Raspberry Pi camera to test to your whether to add or remove diffusion film layers.
 </p>
 
-<p><a href="/images/tutorial_imgs/tom_liu_8-21-14/img6.png" target="_blank">
-<img src="/images/tutorial_imgs/tom_liu_8-21-14/img6.png" align="center" width="400"></a><br>
+<p><a href="/images/tutorial_imgs/Allison_Tielking_2_2015/img6.png" target="_blank">
+<img src="/images/tutorial_imgs/Allison_Tielking_2_2015/img6.png" align="center" width="400"></a><br>
 Figure 5. LED array with Diffuser on top of power supply which doubles as a stand. 
 <br></p>
 
-<p><a id="op-cycletimer"></a><b><font color="green">Optional:</font></b> Cycle timer to coordinate turning on LED array with imaging. <a href="#contents">back to top</a>
+<p><a id="MOSFET"></a><b> Using a MOSFET Transistor to Control 12V Power LED Light Array with the Raspberry Pi. <a href="#contents">back to top</a></b>
 <br><br>
-There are many ways to trigger the LED arrays when imaging. The simplest is to use a cycle timer to turn on the array coincidentally with imaging. We use a CT-1 Digital Recycle Timer (Innovative Grower), which will turn on the lights for 10sec to 99 hours and then turn them off for 10sec to 99 hours. These timers have a small amount of drift, but if you re-coordinate the timer with your Raspberry Pi at the beginning of the experiment, it can work well. </p>
+There are many ways to trigger the LED arrays when imaging. We are using a MOFSET transistor and the GPIO pins of the Raspberry Pi to turn the 12V LED Light Array on and off during imaging.<br>
+<p>1. Purchase MOSFET transistor from Mouser.com (product #IRL530PBF). This has a drain-source breakdown voltage of 100 V, a gate-source breakdown voltage of 10 V, a continuous drain current of 15 A.<br>
+</p>
+<p>2. Connect the ground wire from the LED light array to the drain pin of the MOSFET.
+</p>
+<p>3. Connect the gate pin of the MOSFET to the GPIO wiringPi pin 0 (programmable GPIO pin, #11) with a jumper wire.<br>
+</p>
+<p>4. Connect the MOSFET source pin to the ground pin on the GPIO (#25) with a jumper wire.
+</p>
+<p>5. Use a 10 kiloOhm pull-down resistor to connect the wire from the gate to the wire from the ground. This resistor is used to pull the charge off the gate. 
+</p>
+<p>6. Connect the other end of the ground wire back to the power source (12 Volts).<br>
+</p>
+<p>7. Connect the MOSFET source pin to the ground pin on the GPIO (#25) with a jumper wire.
+</p></p>
+
+<p><a href="/images/tutorial_imgs/Allison_Tielking_2_2015/img12.png" target="_blank">
+<img src="/images/tutorial_imgs/Allison_Tielking_2_2015/img12.png" align="center" width="400"></a><br>
+Figure 6. Diagram of how to wire LED array to MOSFET transistor and Raspberry PI. 
+<br></p>
+
+<p><a id="install_GPIO"></a><b> Installing GPIO. <a href="#contents">back to top</a></b>
+<br><br>
+In order to trigger the LED arrays when imaging you must have GPIO installed on your Raspberry Pi.<br>
+<p><b><font color="orange">Note:</font></b> To install GPIO, use the following commands:
+</p>
+<p>1. Update</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+</code></pre></div>
+<p>2.Get GPIO  
+</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">rpi</span><span class="o">.</span><span class="n">gpio</span>
+</code></pre></div>
+<p><p>3. git clone wiringPi<br>
+</p></p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="p">:</span><span class="o">//</span><span class="n">git</span><span class="o">.</span><span class="n">drogon</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">wiringPi</span>
+</code></pre></div>
+<p>4. Reboot  
+</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">sudo</span> <span class="n">reboot</span>
+</code></pre></div>
+<p><br></p>
+
+<p><a id="camera.sh"></a><b> Coordinating imaging and turning on LED lights through GPIO. <a href="#contents">back to top</a></b>
+<br>
+Coordinating imaging and turning on LED lights through GPIO is done through a simple python script, camera.sh.
+<p>1. First, in your home folder make a new directory to save your images in, called camera:
+</p></p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">mkdir</span> <span class="n">camera</span>
+</code></pre></div>
+<p>2. Then, in your home directory, create a new shell script called camera.sh
+</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">sudo</span> <span class="n">nano</span> <span class="n">camera</span><span class="o">.</span><span class="n">sh</span>
+</code></pre></div>
+<p>3. Enter this program into the shell script:
+</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/bin/bash</span>
+<span class="c">#This internally sets the gpio pin to be an output pin.</span>
+<span class="n">sudo</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">gpio</span> <span class="n">mode</span> <span class="mi">0</span> <span class="n">out</span>
+<span class="c">#This turns the gpio pin 0 to 3.3 volts relative the ground.</span>
+<span class="n">sudo</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">gpio</span> <span class="n">write</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="c">#This sleeps the Pi for .25 seconds before taking the photo.</span>
+<span class="n">sleep</span> <span class="mf">0.25</span>
+<span class="c">#This takes the photo, labels it with the date and time and saves in camera folder, and transforms the picture with a vertical and horizontal flip (if using the camera case above, otherwise omit -vf -hf), alters exposure and image quality </span>
+<span class="n">raspistill</span>  <span class="o">-</span><span class="n">o</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">pi</span><span class="o">/</span><span class="n">camera</span><span class="o">/</span><span class="err">$</span><span class="p">(</span><span class="n">date</span> <span class="o">+</span><span class="s">&quot;%Y-%m-</span><span class="si">%d</span><span class="s">_%H%M%S&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">jpg</span> <span class="o">-</span><span class="n">vf</span> <span class="o">-</span><span class="n">hf</span> <span class="o">-</span><span class="n">ex</span> <span class="n">auto</span> <span class="o">-</span><span class="n">mm</span> <span class="n">backlit</span> <span class="o">-</span><span class="n">q</span> <span class="mi">75</span> <span class="o">-</span><span class="n">awb</span> <span class="n">auto</span> <span class="o">-</span><span class="n">ev</span> <span class="o">+</span><span class="mi">3</span>
+<span class="c">#Pi sleeps for another .25 seconds after photo is taken</span>
+<span class="n">sleep</span> <span class="mf">0.25</span>
+<span class="c">#This turns the gpio pin 0 back to ground level (0.0 Volts)</span>
+<span class="n">sudo</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">gpio</span> <span class="n">write</span> <span class="mi">0</span> <span class="mi">0</span>
+</code></pre></div>
+<p>4. control+o to save and control+x to quit
+</p>
+
+<p>5. Change the permissions for the script: 
+</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">chmod</span> <span class="mi">777</span> <span class="n">camera</span><span class="o">.</span><span class="n">sh</span>
+</code></pre></div>
+<p>6. Now the script is executable.
+<br>
+
+<br>
+<a id="time-lapse"></a><b>Time lapse imaging.</b> [back to top](#contents)
+
+
+There are many methods to setting up timelapse imaging on the Raspberry Pi, and the one that we use is to set up a crontab job. This is essentially a script that will run in the background, and take a picture at a prescribed minute/hour/day/month/and day of week.
+To edit crontab:  
+
+  ```python
+  crontab -e
+  ```
+<p>1. Use the arrow keys to go to the bottom of the page after the # signs, then:
+</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python">  <span class="c"># The following will take a picture on the hour, each hour, each day, each month, each day of the week, and save a file into the directory and in the format as designated by the camera.sh script.</span>
+
+<span class="mi">0</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">pi</span><span class="o">/</span><span class="n">camera</span><span class="o">.</span><span class="n">sh</span>
+</code></pre></div>
+<p>2. Type <b>command-X</b> to exit, and press yes to save and overwrite current crontab job
+</p>
+
+<p>3. Now the system will take a picture each hour. The above line can be edited to change time of the picture, options on the camera (e.g. quality, white balance, exposure, rotation, etc), location of where the pictures are saved (you may want to save to a specific folder).
+</p>
 
 <p><a id="station"></a><b>Setup of imaging station. </b> <a href="#contents">back to top</a></p>
 
@@ -365,9 +449,9 @@ There are many ways to trigger the LED arrays when imaging. The simplest is to u
 <p>2. If you are going to do any time lapse, secure the camera and plants/plates with tape to minimize vibration issues during imaging.
 </p>
 
-<p><a href="/images/tutorial_imgs/tom_liu_8-21-14/img7.png" target="_blank">
-<img src="/images/tutorial_imgs/tom_liu_8-21-14/img7.png" align="center" width="600"></a><br>
-Figure 6. Backlight imaging set up.
+<p><a href="/images/tutorial_imgs/Allison_Tielking_2_2015/img7.png" target="_blank">
+<img src="/images/tutorial_imgs/Allison_Tielking_2_2015/img7.png" align="center" width="600"></a><br>
+Figure 7. Backlight imaging set up.
 <br></p>
 
 <p><a id="liquid"></a><b>Liquid sterilization. </b> <a href="#contents">back to top</a></p>
@@ -404,7 +488,7 @@ Figure 6. Backlight imaging set up.
 
 <p><a id="hypocotyl"></a><b>Measuring Hypocotyl Length. </b> <a href="#contents">back to top</a></p>
 
-<p>1. Transfer files from Raspberry Pi to a folder that will contain only the images to be analyzed (e.g. 72 hours worth of images)
+<p>1. Transfer files from Raspberry Pi to a folder that will contain only the images to be analyzed (e.g. 72-96 hours worth of images)
 </p>
 
 <p><b><font color="orange">Note:</font></b> If Fiji is not downloaded onto your computer, do so now by going <a href="http://fiji.sc/Fiji">here</a>.</p>
@@ -439,13 +523,18 @@ Figure 6. Backlight imaging set up.
 <p>11. Repeat 7-11 on new seedling. 
 </p>
 
-<p>12. Do for all seedlings.
+<p>12. Do for all quality seedlings. If the seedling does not begin growing by 24 hours or if is planted directly next to another seed, then the measurements for that seedling/s should not be taken. 
 </p>
 
 <p>13. Each measurement will need to be assigned a time of capture.
 </p>
 
-<p><p>14. Plot Length vs time. </p>
+<p>14. Plot Length vs time. 
+</p>
+
+<p><a href="/images/tutorial_imgs/Allison_Tielking_2_2015/img15.png" target="_blank">
+<img src="/images/tutorial_imgs/Allison_Tielking_2_2015/img15.png" align="center" width="600"></a><br>
+Figure 8. Example of Arabidopsis thaliana hypocotyl being measured.</p>
 
         </div>
     </div>
