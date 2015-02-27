@@ -10,7 +10,7 @@ We are very excited (VERY) to have recieved support from both the [Danforth Cent
 and the [Raspberry Pi Education Foundation](http://www.raspberrypi.org/education-fund/) for a number of education and outreach activities in 2015.
 For more on this please see this [blog post](http://www.danforthcenter.org/news-media/roots-shoots-blog/blog-item/danforth-center-s-maker-group-receives-funding-to-support-local-stem-outreach)
 
-##Our plan for our Raspberry Pi Education Funds:  
+##The plan for our Raspberry Pi Education Funds:  
 
 1.  Raspberry Pi Jam outreach event to stir community interest (especially with educators) in Raspberry Pi computers and Maker projects.  
       * <font color='blue'>The first Rasbperry Pi Jam occured on Janurary 31, 2015, and was a huge success! There will be a post soon</font>.  
