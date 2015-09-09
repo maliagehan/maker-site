@@ -153,7 +153,7 @@
 
 <p><b><font color="orange">Note:</font></b> Do not be alarmed when no writing appears when you are typing in the password, this is just a security feature of Linux. However, to change the password, type in the command:
 </p></p>
-<div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="n">sudo</span> <span class="n">raspi</span><span class="o">-</span><span class="n">config</span> 
+<div class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">sudo</span> <span class="n">raspi</span><span class="o">-</span><span class="n">config</span> 
 </code></pre></div>
 <p><a href="/images/tutorial_imgs/tom_liu_8-21-14/img1.png" target="_blank">
 <img src="/images/tutorial_imgs/tom_liu_8-21-14/img1.png" align="center" width="600"></a><br></p>
@@ -161,7 +161,7 @@
 <p>
 10. After you have successfully logged in, the command line prompt should read: 
 </p>
-<div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="n">pi</span><span class="nd">@raspberrypi</span><span class="o">~</span><span class="err">$</span> 
+<div class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">pi</span><span class="nd">@raspberrypi</span><span class="o">~</span><span class="err">$</span> 
 </code></pre></div>
 <p><br>
 <b>Setting the Time and Date on your Raspberry Pi.</b> <a href="#contents">back to top</a></p>
@@ -173,7 +173,7 @@
 <p>
 1. Type the following:
 </p>
-<div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="c">#sudo date -s Day Of Week Month Day Hours:Minutes:Seconds Timezone Year</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python">    <span class="c">#sudo date -s Day Of Week Month Day Hours:Minutes:Seconds Timezone Year</span>
     <span class="c">#for example if it is 07/11/2014 at 11:59:30 on Friday in the Central timezone:</span>
 
     <span class="n">sudo</span> <span class="n">date</span> <span class="o">-</span><span class="n">s</span> <span class="n">Fri</span> <span class="n">Jul</span> <span class="mi">11</span> <span class="mi">11</span><span class="p">:</span><span class="mi">59</span><span class="p">:</span><span class="mi">30</span> <span class="n">CDT</span> <span class="mi">2014</span>
@@ -181,7 +181,7 @@
 <p>
 2. This will update the time. If the Raspberry Pi reboots, check the time and date using the command:
 </p>
-<div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="n">date</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">date</span>
 </code></pre></div>
 <p><br>
 <a id="cam"></a><b>Setting up the Raspberry Pi camera. </b> <a href="#contents">back to top</a></p>
@@ -199,7 +199,7 @@
 
 <p>4. To take a photo, enter the command:  
 </p>
-<div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="n">raspistill</span> <span class="o">-</span><span class="n">o</span> <span class="n">image</span><span class="o">.</span><span class="n">jpg</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">raspistill</span> <span class="o">-</span><span class="n">o</span> <span class="n">image</span><span class="o">.</span><span class="n">jpg</span>
 </code></pre></div>
 <p>5. The picture is now in your home folder, "labeled image.jpg"
 </p>
@@ -219,7 +219,7 @@
   ```
 <p>2. From the prompt, run: 
 </p>
-<div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="n">sudo</span> <span class="n">raspi</span><span class="o">-</span><span class="n">config</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">sudo</span> <span class="n">raspi</span><span class="o">-</span><span class="n">config</span>
 
     <span class="c">#you should now see the &quot;camera&quot; option.</span>
 </code></pre></div>
@@ -242,7 +242,7 @@
 </p>
 <p>4. When it does turn, use the following command to check the focal length:
 </p></p>
-<div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="n">raspistill</span> <span class="o">-</span><span class="n">o</span> <span class="n">image</span><span class="o">.</span><span class="n">jpg</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">raspistill</span> <span class="o">-</span><span class="n">o</span> <span class="n">image</span><span class="o">.</span><span class="n">jpg</span>
 </code></pre></div>
 <p><b><font color="orange">Note:</font></b> It is suggested to use a ruler and place the camera at one end of the ruler. Place an object at the desired distance (we use a business card to look for fine detail) and adjust the focus until sharp.
 </p>
@@ -267,22 +267,22 @@ Figure 1. Raspberry Pi with 730nm cutoff filter over lens.
 
 <p>1. If you are imaging plants, then the red light on the camera could cause unwanted responses. To turn off the LED, add the command to the <b>config.txt file</b>:
 </p>
-<div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="n">disable_camera_led</span><span class="o">=</span><span class="mi">1</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">disable_camera_led</span><span class="o">=</span><span class="mi">1</span>
 </code></pre></div>
 <p><b><font color="orange">Note:</font></b> To edit the config.txt file you can use Nano:
 </p>
-<div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">config</span><span class="o">.</span><span class="n">txt</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">config</span><span class="o">.</span><span class="n">txt</span>
 </code></pre></div>
 <p>1. Use the arrow keys to scroll to the end of the file and add to the last line:
 </p>
-<div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="n">disable_camera_led</span><span class="o">=</span><span class="mi">1</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">disable_camera_led</span><span class="o">=</span><span class="mi">1</span>
 </code></pre></div>
 <p>2. Press CTRL-x to quit. If prompted press Y followed by Return or Enter.
 </p>
 
 <p>3. After you reboot the camera the red LED will be disabled. Reboot with the following:
 </p>
-<div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="n">sudo</span> <span class="n">reboot</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">sudo</span> <span class="n">reboot</span>
 </code></pre></div>
 <p><b><font color="orange">Note:</font></b> There is not a way to disable the LEDs on the circuit board of the Raspberry Pi itself, however, puffy black fabric paint is opaque and can be used to block light from the board.
 <br></p>
@@ -296,11 +296,11 @@ Figure 2. LEDs covered with puffy black fabric paint.
 
 <p>There are many methods to setting up timelapse imaging on the Raspberry Pi, and the one that we use is to set up a crontab job. This is essentially a script that will run in the background, and take a picture at a prescribed minute/hour/day/month/and day of week.
 To edit crontab:  </p>
-<div class="highlight"><pre><code class="python language-python" data-lang="python">    <span class="n">crontab</span> <span class="o">-</span><span class="n">e</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">crontab</span> <span class="o">-</span><span class="n">e</span>
 </code></pre></div>
 <p>1. Use the arrow keys to go to the bottom of the page after the # signs, then:
 </p>
-<div class="highlight"><pre><code class="python language-python" data-lang="python">  <span class="c"># The following will take a picture each twenty minutes, each hour, each day, each month, each day of the week, and save a file into the home directory labeled with the date (YYYYMMDDHHMM_timelapse.jpg will be the format).</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python">  <span class="c"># The following will take a picture each twenty minutes, each hour, each day, each month, each day of the week, and save a file into the home directory labeled with the date (YYYYMMDDHHMM_timelapse.jpg will be the format).</span>
 
     <span class="o">/</span><span class="mi">20</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">raspistill</span> <span class="o">-</span><span class="n">o</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">pi</span><span class="o">/</span><span class="err">$</span><span class="p">(</span><span class="n">date</span><span class="o">+</span><span class="s">&quot;\%Y\%m\</span><span class="si">%d</span><span class="s">\%H\%M&quot;</span><span class="p">)</span><span class="n">_timelapse</span><span class="o">.</span><span class="n">jpg</span>
 </code></pre></div>
