@@ -1,18 +1,35 @@
-<script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-  </script>
-  <script type="text/javascript">
-    try {
-      var pageTracker = _gat._getTracker("UA-51735493-2");
-    pageTracker._trackPageview();
-    } catch(err) {}
-  </script>
-  <script type="text/javascript">
-    $('.nav a:contains({{page.title}})').parent().addClass('active');
-    $('.nav a:contains({{page.subtitle}})').parent().addClass('active');
-  </script>
-  <footer>
-    <p>&copy; Donald Danforth Plant Science Center 2014</p>
-  </footer>
-</div>
+<div id="footerwrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h4>About</h4>
+                <div class="hline-w"></div>
+                <p>{{ site.about }}</p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Social Link</h4>
+                <div class="hline-w"></div>
+                <p>
+                    {% for network in site.social %}
+                        <a href="{{ network.url }}" class="btn-social btn-outline"><i class="fa fa-{{ network.title }}"></i></a>
+                    {% endfor %}
+                
+               
+                  <a class="twitter-timeline" href="https://twitter.com/DDPSCmaker" height="300" width="500" data-widget-id="427500324601856000">Tweets by @DDPSCmaker</a>
+                  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>   
+                
+                </p>
+                
+            </div>
+            <div class="col-lg-4">
+                <h4>Location</h4>
+                <div class="hline-w"></div>
+                <p>
+                    {% for line in site.address.first.lines %}
+                        {{ line }} <br>
+                    {% endfor %}
+                </p>
+            </div>
+        </div><! --/row -->
+    </div><! --/container -->
+</div><! --/footerwrap -->

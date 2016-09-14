@@ -1,35 +1,33 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
+<head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print"/>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css" />  
-    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap-theme.min.css" />  
-    <link rel="stylesheet" type="text/css" href="/stylesheets/pygment_trac.css" />
-    <link rel="stylesheet" type="text/css" href="/stylesheets/custom.css" />
-    <link rel="stylesheet" href="/stylesheets/bootstrap.icon-large.min.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/javascripts/bootstrap.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/assets/ico/favicon.ico">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <title>The Maker Group - Documentation</title>
 
-    <title>The Maker Group</title>
-  </head>
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
 
-  <body>
-    <header>
-      <div class="inner">
-        <h1><a href="https://maliagehan.github.io/maker-site" target="blank"><font color="white">THE MAKER GROUP</font></a></h1>
-        <h2><a href="http://danforthcenter.org" target="blank"><font color="white">DONALD DANFORTH PLANT SCIENCE CENTER</font></a></h2>
-        <a href="https://github.com/maliagehan/maker-site" class="button"><small>View On</small>GitHub</a>
-      </div>
-    </header>
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
     
+    <!-- Custom CSS -->
+    <!--<link rel="stylesheet" href="/css/main.css">-->
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
   <!--Static navbar-->
 <div class="navbar navbar-inverse navbar-static-top" role="navigation">
   <div class="container">
@@ -103,68 +101,92 @@
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <h1>Documentation</h1>
       <div class="jumbotron">  
-  <h2>Logical Operations - And</h2>
+  <h2 id="logical-operations---and">Logical Operations - And</h2>
 
-<p>Join two images using the bitwise AND operator. Images must be the same size. This is a wrapper for the Opencv Function <a href="http://docs.opencv.org/modules/core/doc/operations_on_arrays.html">bitwise_and</a>.  </p>
+<p>Join two images using the bitwise AND operator. Images must be the same size. This is a wrapper for the Opencv Function <a href="http://docs.opencv.org/modules/core/doc/operations_on_arrays.html">bitwise_and</a>.</p>
 
-<p><font color='blue'><b>logical_and(img1, img2, device, debug=False)</font></b><br>
-<font color='orange'><strong>returns</strong></font> device, &#39;and&#39; image</p>
+<font color="blue"><b>logical\_and(img1, img2, device, debug=False)&lt;/font&gt;</b><br />
+<font color="orange">**returns**</font> device, 'and' image
+    
+- **Parameters:**   
+  - img1 - image object 1.
+  - img2 - image object 2.
+  - device - Counter for image processing steps
+  - debug- Default value is False, if True, intermediate image will be printed 
 
-<ul>
-<li><p><strong>Parameters:</strong>   </p>
+- **Context:**  
+  - Used to combine to images. Very useful when combining image channels that have been thresholded seperately.
 
-<ul>
-<li>img1 - image object 1.</li>
-<li>img2 - image object 2.</li>
-<li>device - Counter for image processing steps</li>
-<li>debug- Default value is False, if True, intermediate image will be printed </li>
-</ul></li>
-<li><p><strong>Context:</strong>  </p>
+- **Example use:**  
 
-<ul>
-<li>Used to combine to images. Very useful when combining image channels that have been thresholded seperately.</li>
-</ul></li>
-<li><p><strong>Example use:</strong>  </p>
+ - [Use In Tutorial]()
+ 
+  ```python
+    import plantcv as pcv
+    
+    # Combine two images that have had different thresholds applied to them. For logical 'and' operation object pixel must be in both images to be included in 'and' image.
+    
+    device, and_image = pcv.logical_and(s_threshold, b_threshold, device, args.debug)
 
-<ul>
-<li><a href="">Use In Tutorial</a></li>
-</ul></li>
-</ul>
-<div class="highlight"><pre><code class="language-python" data-lang="python">    <span class="kn">import</span> <span class="nn">plantcv</span> <span class="kn">as</span> <span class="nn">pcv</span>
-
-    <span class="c"># Combine two images that have had different thresholds applied to them. For logical &#39;and&#39; operation object pixel must be in both images to be included in &#39;and&#39; image.</span>
-
-    <span class="n">device</span><span class="p">,</span> <span class="n">and_image</span> <span class="o">=</span> <span class="n">pcv</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">s_threshold</span><span class="p">,</span> <span class="n">b_threshold</span><span class="p">,</span> <span class="n">device</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">debug</span><span class="p">)</span>
-</code></pre></div>
-<p><a href="/img/documentation_images/logical_and/5_fill0.png" target="_blank">
-  <img src="/img/documentation_images/logical_and/5_fill0.png" width="200"></a>
+  ```
+  <a href="/img/documentation_images/logical_and/5_fill0.png" target="_blank">
+  <img src="/img/documentation_images/logical_and/5_fill0.png" width="200" /></a>
   <a href="/img/documentation_images/logical_and/9_fill150.png" target="_blank">
-  <img src="/img/documentation_images/logical_and/9_fill150.png" width="200"></a>
+  <img src="/img/documentation_images/logical_and/9_fill150.png" width="200" /></a>
   <a href="/img/documentation_images/logical_and/10_and_joined.png" target="_blank">
-  <img src="/img/documentation_images/logical_and/10_and_joined.png" width="200"></a><br>
-  Figure 1. (Left) Original image 1. (Middle) Original image 2.(Right) Image combined with logical &#39;and&#39; operation.  </p>
+  <img src="/img/documentation_images/logical_and/10_and_joined.png" width="200" /></a><br />
+  Figure 1. (Left) Original image 1. (Middle) Original image 2.(Right) Image combined with logical 'and' operation.  
+ 
+
+</font>
 
       </div>
   
-  <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-  </script>
-  <script type="text/javascript">
-    try {
-      var pageTracker = _gat._getTracker("UA-51735493-2");
-    pageTracker._trackPageview();
-    } catch(err) {}
-  </script>
-  <script type="text/javascript">
-    $('.nav a:contains(Documentation)').parent().addClass('active');
-    $('.nav a:contains(Logical Operations-And)').parent().addClass('active');
-  </script>
-  <footer>
-    <p>&copy; Donald Danforth Plant Science Center 2014</p>
-  </footer>
-</div>
-
+  <div id="footerwrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h4>About</h4>
+                <div class="hline-w"></div>
+                <p>The Maker Group at the Donald Danforth Plant Science Center is a forum for all members of the Center to explore constructing low-cost hardware and software engineering tools.</p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Social Link</h4>
+                <div class="hline-w"></div>
+                <p>
+                    
+                        <a href="" class="btn-social btn-outline"><i class="fa fa-"></i></a>
+                    
+                        <a href="https://twitter.com/DDPSCmaker" class="btn-social btn-outline"><i class="fa fa-twitter"></i></a>
+                    
+                        <a href="" class="btn-social btn-outline"><i class="fa fa-"></i></a>
+                    
+                        <a href="" class="btn-social btn-outline"><i class="fa fa-"></i></a>
+                    
+                
+               
+                  <a class="twitter-timeline" href="https://twitter.com/DDPSCmaker" height="300" width="500" data-widget-id="427500324601856000">Tweets by @DDPSCmaker</a>
+                  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>   
+                
+                </p>
+                
+            </div>
+            <div class="col-lg-4">
+                <h4>Location</h4>
+                <div class="hline-w"></div>
+                <p>
+                    
+                        975 North Warson Road, <br>
+                    
+                        St. Louis, Missouri 63132, <br>
+                    
+                        United States. <br>
+                    
+                </p>
+            </div>
+        </div><! --/row -->
+    </div><! --/container -->
+</div><! --/footerwrap -->
     </div>
   </div>
 
