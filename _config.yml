@@ -47,7 +47,7 @@ address:
     - 975 North Warson Road,
     - St. Louis, Missouri 63132,
     - United States.
-email: 
+email: ddpsc.maker@gmail.com
 tel: 
 
 
@@ -112,3 +112,4 @@ members:
 
 # Short text about your company. Shown in footer on every page and also separately on Home and Contact page.
 about: "The Maker Group at the Donald Danforth Plant Science Center is a forum for all members of the Center to explore constructing low-cost hardware and software engineering tools."
+copyright: "©2016 Donald Danforth Plant Science Center. All rights reserved"
