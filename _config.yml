@@ -58,57 +58,62 @@ members:
   - name: Noah Fahlgren
     position: Director of Bioinformatics Core
     text: Founding Member
-    img: #team01.jpg
+    img: robot_red.jpg
     social:
-      - title: envelope #use for email address
-        url: mailto:name@domain.com
+      - title: linkedin
+        url: https://linkedin.com/pub/noah-fahlgren/46/659/2b0
       - title: twitter
-        url: http://twitter.com/handle
+        url: https://twitter.com/NoahFahlgren
   - name: Malia Gehan
     position: Assistant DDPSC Member and PI
     text: Founding Member
-    img: #team02.jpg
+    img: robot_orange.jpg
     social:
-      - title: envelope #use for email address
-        url: mailto:name@domain.com
+      - title: linkedin
+        url: https://linkedin.com/pub/malia-gehan/19/682/647
       - title: twitter
-        url: http://twitter.com/handle
-  - name: Max Feldman
-    position: USDA Postdoctoral Researcher
-    text: Active Member
-    img: #team03.jpg
-    social:
-      - title: envelope #use for email address
-        url: mailto:name@domain.com
-      - title: twitter
-        url: http://twitter.com/handle
-  - name: Kazuhiro Kikuchi
-    position: Postdoctoral Researcher
-    text: Active Member
-    img: #team04.jpg
-    social:
-      - title: envelope #use for email address
-        url: mailto:name@domain.com
-      - title: twitter
-        url: http://twitter.com/handle
+        url: https://twitter.com/maliadong
   - name: Dmitri Nusinow
     position: Assistant DDPSC Member and PI
     text: Active Member
-    img: #team05.jpg
+    img: robot_yellow.jpg
     social:
-      - title: envelope #use for email address
-        url: mailto:name@domain.com
+      - title: linkedin
+        url: https://linkedin.com/pub/dmitri-nusinow/4/240/244
       - title: twitter
-        url: http://twitter.com/handle
+        url: https://twitter.com/meter
+  - name: Max Feldman
+    position: USDA Postdoctoral Researcher
+    text: Active Member
+    img: robot_green.jpg
+    social:
+      - title: twitter
+        url: https://twitter.com/maxjfeldman
+  - name: Leonardo Chavez
+    position: Phenotyping Technician
+    text: Active Member
+    img: robot_blue.jpg
+    social:
+      - title: linkedin 
+        url: https://linkedin.com/in/leonardo-chavez-69984629
+      - title: twitter
+        url: http://twitter.com/Leo_Chavez037
+  - name: Kazuhiro Kikuchi
+    position: Postdoctoral Researcher
+    text: Active Member
+    img: robot_darkblue.jpg
+    social:
+      - title: linkedin
+        url: https://linkedin.com/pub/kazuhiro-kikuchi/12/609/13b
   - name: Christine Shyu
     position: Postdoctoral Fellow
     text: Active Member
-    img: #team06.jpg
+    img: robot_purple.jpg
     social:
-      - title: envelope #use for email address
-        url: mailto:name@domain.com
+      - title: linkedin
+        url: https://linkedin.com/pub/christine-shyu/4a/70/79
       - title: twitter
-        url: http://twitter.com/handle
+        url: https://twitter.com/shyuchris
 
 # Short text about your company. Shown in footer on every page and also separately on Home and Contact page.
 about: "The Maker Group at the Donald Danforth Plant Science Center is a forum for all members of the Center to explore constructing low-cost hardware and software engineering tools."
