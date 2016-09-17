@@ -4,7 +4,7 @@ title: Outreach
 subtitle: DDPSC Maker Group Outreach
 ---
 
-##DDSPC Maker Group Education and Outreach
+DDPSC Maker Group Education and Outreach
 
 The DDPSC Maker Group develops low-cost research tools (in our spare time) and are keen to share our
 experiences with others. We are actively developing lesson plans and [tutorials](http://maker.danforthcenter.org/pages/tutorials/)
