@@ -23,7 +23,7 @@ subtitle: Home
                 <i class="fa fa-flask"></i>
                 <h4>DDPSC Projects</h4>
                 <p>View projects designed in creating low-cost hardware and custom software for high-throughput plant phenotyping. Science! </p>
-                <p><br/><a href="{{ "/pages/projects/" | prepend: site.baseurl }}" class="btn btn-theme">More Info</a></p>
+                <p><br/><a href="{{site.baseurl}}/pages/projects.html" class="btn btn-theme">More Info</a></p>
             </div>		 				
         </div>
     </div><! --/container -->
@@ -31,23 +31,26 @@ subtitle: Home
 
 {% include portfolio.html title="LATEST PROJECTS" limit=10 %}
 
-<!--
 <div class="container mtb">
     <div class="row">
-        <div class="col-lg-4 col-lg-offset-1">
-            <h4>More About Us.</h4>
-            <p>{{ site.about }}</p>
-            <p><br/><a href="{{ "/about/" | prepend: site.baseurl }}" class="btn btn-theme">More Info</a></p>
-        </div>
+        
+        <div class="col-md-4">
+            <h4>Website created using Github!</h4>
+            <div class="hline"></div>
+            <a href="https://github.com/maliagehan/maker-site" target="_blank"><img src="assets/img/github_button.PNG"  height="200" width="400"></a>
+        </div><! --/col-md-4 -->
+        
+        <div class="col-md-4">
+            <a href="http://www.danforthcenter.org/" target="_blank"><img src="/assets/img/DanforthLogo.jpg"></a>
+        </div><! --/col-md-4 -->
 
-
-        <div class="col-lg-3">
+        <div class="col-md-4">
             <h4>Latest Posts</h4>
             <div class="hline"></div>
             {% for post in site.categories['blog'] limit:5 %} 
                 <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}.</a></p>
             {% endfor %} 
         </div>
--->
     </div><! --/row -->
+    
 </div><! --/container -->

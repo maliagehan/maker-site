@@ -13,8 +13,8 @@
     <div class="navbar-collapse collapse navbar-right">
       <ul class="nav navbar-nav">
         <li {% if page.title == "Home" %}class="active"{% endif %}><a href="{{"/" | prepend: site.baseurl }}">HOME</a></li>
-        <li {% if page.title == "Blog" %}class="active"{% endif %}><a href="{{"/pages/blog/" | prepend: site.baseurl }}">BLOG</a></li>
-        <li {% if page.title == "Projects" %}class="active"{% endif %}><a href="{{"/pages/projects/" | prepend: site.baseurl }}">DDPSC PROJECTS</a></li>
+        <li {% if page.title == "Blog" %}class="active"{% endif %}><a href="{{site.baseurl}}/pages/blog.html">BLOG</a></li>
+        <li {% if page.title == "Project" %}class="active"{% endif %}><a href="{{site.baseurl}}/pages/projects.html">DDPSC PROJECTS</a></li>
         <li {% if page.title == "Tutorial" %}class="active"{% endif %}><a href="{{"/pages/tutorials/" | prepend: site.baseurl }}">TUTORIALS</a></li>
         <li {% if page.title == "Outreach" %}class="active"{% endif %}><a href="{{"/pages/outreach/" | prepend: site.baseurl }}">OUTREACH</a></li>
         <li {% if page.title == "Events" %}class="active"{% endif %}><a href="{{site.baseurl}}/pages/events.html">EVENTS</a></li>

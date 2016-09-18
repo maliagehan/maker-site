@@ -1,5 +1,5 @@
 ---
-layout: resources
+layout: about
 title: PlantCV
 subtitle: PlantCV
 ---

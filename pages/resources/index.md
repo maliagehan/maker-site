@@ -1,5 +1,5 @@
 ---
-layout: resources
+layout: about
 title: Resources Overview
 subtitle: Resources Overview
 ---
