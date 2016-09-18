@@ -46,7 +46,7 @@ DDPSC Maker Site
 <p>- ...</p>
 
 <p>lab: lab of project</p>
-<p>website: http://www.internet.com</p>
+<p>website: webpage of lab</p>
 <p>---</p>
 
 <p>This is a regular paragraph. Write as much as you like.</p>
