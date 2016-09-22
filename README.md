@@ -21,7 +21,9 @@ DDPSC Maker Site
 <p>thumb: thumb01.jpg    #place thumbnail (70x70) with this name in /assets/img/blog/thumbs/</p>
 <p>---</p>
 <p>This text will appear in the excerpt "post preview" on the Blog page that lists all the posts.</p>
-<p><!--more--></p>
+
+<p><
+!--more--></p>
 <p>This text will not be shown in the excerpt because it is after the excerpt separator.</p>
 
 =======================================================
