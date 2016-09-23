@@ -10,7 +10,7 @@
     <div class="spacing"></div>
     <h4>Categories</h4>
     <div class="hline"></div>
-    {% for category in site.categories %}{% unless category.first == "blog" or category.first == "project" or category.first == "tutorial" %}
+    {% for category in site.categories %}{% unless category.first == "blog" or category.first == "project" or category.first == "tutorial" or category.first == "outreach" %}
         <p>
             <a href="{{ '/category/#'  | prepend: site.baseurl  }}{{ category | first }}"><i class="fa fa-angle-right"></i> {{ category | first | capitalize }}</a>
             <span class="badge badge-theme pull-right">{{ category | last | size }}</span>
@@ -36,7 +36,7 @@
     <h4>Popular Tags</h4>
     <div class="hline"></div>
     <p>
-    {% for category in site.categories %}{% unless category.first == "blog" or category.first == "project" or category.first == "tutorial" %}
+    {% for category in site.categories %}{% unless category.first == "blog" or category.first == "project" or category.first == "tutorial" or category.first == "outreach" %}
             <a class="btn btn-theme" href="{{ '/category/#'  | prepend: site.baseurl  }}{{ category | first }}" role="button">{{ category | first | capitalize }} ({{ category | last | size }})</a>	         
         {% endunless %}{% endfor %}
     </p>
