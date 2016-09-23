@@ -6,14 +6,16 @@ author: Leonardo Chavez
 categories: 
 - blog 
 - Resources
-img: plantcv_001.jpg
-thumb: plantcv001_thumb.jpg
+img: resources.jpg
+thumb: resources_thumb.jpg
 
 ---
 
 <b>Resources!</b> Below are useful websites for constructing and analyzing data from Maker Projects, 
 if you'd like a website added please <a href="{{site.baseurl}}/pages/contact.html" target="_blank">contact us</a>. 
 This blog will be updated frequently.<!--more-->
+
+DDPSC Maker resources include educational materials (lesson plans etc., which we are actively working on), and links to useful Maker sites. To see what we're up to now check out our <a href="https://maker-webpage-lchavez.c9users.io/pages/blog.html" target="_blank">blog</a> and follow us on <a href="https://twitter.com/ddpscmaker" target="_blank">Twitter</a>.
 
 <table align="center">
     <tr>

@@ -16,3 +16,4 @@ website: http://danusinow.github.io/
 
 A Danforth Center Maker Project by Allison Tielking (Winter 2014 MICDS Highschool Intern), Tom Liu (2014 Summer STARS student) and Dmitri Nusinow
 
+<p><a href="{{site.baseurl}}/tutorial/raspberry%20pi/led/raspberry%20pi%20camera/RPi-LED-Illumination-and-Imaging" class="btn btn-theme"> View Tutorial </a></p>

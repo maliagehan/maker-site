@@ -26,7 +26,7 @@ safely operate and bring their creation to life.
 The TechShop is a wonderful addition to the cities growing maker community and expect to 
 see some great ideas come out of the TechShop from our Danforth Center Scientist!
 
-<img src="{{ "/assets/img/blog/techshop_002.jpg" | prepend: site.baseurl }}" alt="techshop tour" style="padding:15px 15px 15px 15px;">
-<img src="{{ "/assets/img/blog/techshop_004.jpg" | prepend: site.baseurl }}" alt="techshop tour" style="padding:15px 15px 15px 15px;">
-<img src="{{ "/assets/img/blog/techshop_008.jpg" | prepend: site.baseurl }}" alt="techshop tour" style="padding:15px 15px 15px 15px;">
-<img src="{{ "/assets/img/blog/techshop_007.jpg" | prepend: site.baseurl }}" alt="techshop tour" style="padding:15px 15px 15px 15px;">
+<img src="{{ "/assets/img/blog/techshop_tour/techshop_002.jpg" | prepend: site.baseurl }}" alt="techshop tour" style="padding:15px 15px 15px 15px;">
+<img src="{{ "/assets/img/blog/techshop_tour/techshop_004.jpg" | prepend: site.baseurl }}" alt="techshop tour" style="padding:15px 15px 15px 15px;">
+<img src="{{ "/assets/img/blog/techshop_tour/techshop_008.jpg" | prepend: site.baseurl }}" alt="techshop tour" style="padding:15px 15px 15px 15px;">
+<img src="{{ "/assets/img/blog/techshop_tour/techshop_007.jpg" | prepend: site.baseurl }}" alt="techshop tour" style="padding:15px 15px 15px 15px;">

@@ -1,14 +1,30 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-2 col-md-2 sidebar">
-      <ul class="nav nav-sidebar">
-        <li class="nav"><a href="{{site.baseurl}}/pages/outreach/index.html">Outreach</a></li>
-        <li class="nav"><a href="{{site.baseurl}}/pages/outreach/posts/outreach1.html">2015 Raspberry Pi Education Funds</a></li>               
-      </ul>
-    </div>
-    </div>
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-        <div class="jumbotron"> 
-        {{content}}
-        </div>
-    </div>
+<div class="col-lg-4">
+   <!--  <h4>Search</h4>
+    <div class="hline"></div>
+        <p>
+            <br/>
+            <input type="text" class="form-control" placeholder="Search something">
+        </p>
+    <div class="spacing"></div> -->
+   
+    <div class="spacing"></div>
+    <h4>Categories</h4>
+    <div class="hline"></div>
+    {% for category in site.categories %}{% unless category.first == "blog" or category.first == "project" or category.first == "tutorial" or category.first == "outreach" %}
+        <p>
+            <a href="{{ '/category/#'  | prepend: site.baseurl  }}{{ category | first }}"><i class="fa fa-angle-right"></i> {{ category | first | capitalize }}</a>
+            <span class="badge badge-theme pull-right">{{ category | last | size }}</span>
+        </p>
+    {% endunless %}{% endfor %}
+
+    <div class="spacing"></div>
+
+    <h4>Popular Tags</h4>
+    <div class="hline"></div>
+    <p>
+    {% for category in site.categories %}{% unless category.first == "blog" or category.first == "project" or category.first == "tutorial" or category.first == "outreach" %}
+            <a class="btn btn-theme" href="{{ '/category/#'  | prepend: site.baseurl  }}{{ category | first }}" role="button">{{ category | first | capitalize }} ({{ category | last | size }})</a>	         
+        {% endunless %}{% endfor %}
+    </p>
+</div>
+
