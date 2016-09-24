@@ -8,7 +8,6 @@ categories:
 - Maker Group
 - Raspberry Pi Education Fund
 img: RPi_outreach.jpg
-thumb: RPi_outreachthumb.jpg
 
 ---
 

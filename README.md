@@ -84,7 +84,6 @@ DDPSC Maker Site
 <p><b>-</b> category1</p>
 <p><b>-</b> category2</p>
 <p><b>img:</b> tutorial_10.jpg #place image (600x450) with this name in /assets/img/tutorial/</p>
-<p><b>thumb:</b> thumb01.jpg    #place thumbnail (70x70) with this name in /assets/img/blog/thumbs/</p>
 
 <p><b>---</b></p>
 
@@ -111,7 +110,6 @@ DDPSC Maker Site
 <p><b>-</b> category2</p>
 <p><b>- outreach</b>             #important: leave this here</p>
 <p><b>img:</b> outreach_10.jpg #place image (600x450) with this name in /assets/img/outreach/</p>
-<p><b>thumb:</b> thumb01.jpg    #place thumbnail (70x70) with this name in /assets/img/blog/thumbs/</p>
 
 <p><b>---</b></p>
 

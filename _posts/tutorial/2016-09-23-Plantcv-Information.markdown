@@ -7,7 +7,6 @@ categories:
 - tutorial 
 - Plantcv
 img: plantcv_001.jpg
-thumb: plantcv001_thumb.jpg
 
 ---
 
