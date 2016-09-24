@@ -6,7 +6,7 @@
             <input type="text" class="form-control" placeholder="Search something">
         </p>
     <div class="spacing"></div> -->
-   
+    <!--
     <div class="spacing"></div>
     <h4>Categories</h4>
     <div class="hline"></div>
@@ -16,10 +16,12 @@
             <span class="badge badge-theme pull-right">{{ category | last | size }}</span>
         </p>
     {% endunless %}{% endfor %}
-
+    
+    
     <div class="spacing"></div>
+    -->
 
-    <h4>Recent Posts</h4>
+    <h4>Recent Blog Posts</h4>
     <div class="hline"></div>
         <ul class="popular-posts">
             {% for post in site.categories['blog'] limit:4 %} 
@@ -32,7 +34,13 @@
         </ul>
 
     <div class="spacing"></div>
-
+    
+    <h4>Join Us For A Fun Event!</h4>
+    <div class="hline"></div>
+        <p>
+            <a href="{{site.baseurl}}/pages/events.html"><img src="{{ "/assets/img/DDPSC_jam_2016.jpg" | prepend: site.baseurl }}" class="img-responsive"></a>
+        </p>
+    <!--
     <h4>Popular Tags</h4>
     <div class="hline"></div>
     <p>
@@ -40,5 +48,6 @@
             <a class="btn btn-theme" href="{{ '/category/#'  | prepend: site.baseurl  }}{{ category | first }}" role="button">{{ category | first | capitalize }} ({{ category | last | size }})</a>	         
         {% endunless %}{% endfor %}
     </p>
+    -->
 </div>
-
+    
