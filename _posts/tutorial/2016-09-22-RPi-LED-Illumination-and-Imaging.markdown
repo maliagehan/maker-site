@@ -9,7 +9,6 @@ categories:
 - LED
 - Raspberry Pi Camera
 img: RPi_LED.png
-thumb: RPi_LEDthumb.png
 
 ---
 
