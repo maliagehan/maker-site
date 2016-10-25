@@ -11,3 +11,110 @@ highlighter: pygments
 JB:
     version: 2.0.3
     BASE_PATH : http://maliagehan.github.io/maker-site
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title
+excerpt_separator: <!--more--> #use this in posts to define how long the excerpt of the post (that is shown on the Blog page) is
+
+colors:  #in hex code if not noted else
+  primary: "#00b3fe" #"#F70031" 
+  primary_rgb: "0,179,254" #"247,0,49" #rgb of the primary. Needed in some places for the transparency effect.  
+  secondary: "#384452" #"#33004D"
+  link: "#428bca"
+  link_hover: "#01b2fe"
+  footer_heading: "#ffffff"
+  footer_content: "#bfc9d3"
+  
+  
+### CONTACT SETTINGS ###
+
+# Social networks usernames. Many more available: google-plus, flickr, linkedin, etc). Shown in footer.
+social:
+
+  - title: #facebook
+    url:
+  - title: twitter
+    url: https://twitter.com/DDPSCmaker
+  - title: #instagram
+    url: 
+  - title: #tumblr
+    url: 
+    
+# Postal address (add as many lines as necessary). Shown in footer and on Contact page.
+address:
+  - lines: 
+    - 975 North Warson Road,
+    - St. Louis, Missouri 63132,
+    - United States.
+email: ddpsc.maker@gmail.com
+tel: 
+
+
+### GENERAL DATA FOR VARIOUS LOCATIONS ###
+    
+# Members information. Shown on About page.
+members:
+  - name: Noah Fahlgren
+    position: Director of Bioinformatics Core
+    text: Founding Member
+    img: robot_red.jpg
+    social:
+      - title: linkedin
+        url: https://linkedin.com/pub/noah-fahlgren/46/659/2b0
+      - title: twitter
+        url: https://twitter.com/NoahFahlgren
+  - name: Malia Gehan
+    position: Assistant DDPSC Member and PI
+    text: Founding Member
+    img: robot_orange.jpg
+    social:
+      - title: linkedin
+        url: https://linkedin.com/pub/malia-gehan/19/682/647
+      - title: twitter
+        url: https://twitter.com/maliadong
+  - name: Dmitri Nusinow
+    position: Assistant DDPSC Member and PI
+    text: Active Member
+    img: robot_yellow.jpg
+    social:
+      - title: linkedin
+        url: https://linkedin.com/pub/dmitri-nusinow/4/240/244
+      - title: twitter
+        url: https://twitter.com/meter
+  - name: Max Feldman
+    position: USDA Postdoctoral Researcher
+    text: Active Member
+    img: robot_green.jpg
+    social:
+      - title: twitter
+        url: https://twitter.com/maxjfeldman
+  - name: Leonardo Chavez
+    position: Phenotyping Technician
+    text: Active Member
+    img: robot_blue.jpg
+    social:
+      - title: linkedin 
+        url: https://linkedin.com/in/leonardo-chavez-69984629
+      - title: twitter
+        url: http://twitter.com/Leo_Chavez037
+  - name: Kazuhiro Kikuchi
+    position: Postdoctoral Researcher
+    text: Active Member
+    img: robot_darkblue.jpg
+    social:
+      - title: linkedin
+        url: https://linkedin.com/pub/kazuhiro-kikuchi/12/609/13b
+  - name: Christine Shyu
+    position: Postdoctoral Fellow
+    text: Active Member
+    img: robot_purple.jpg
+    social:
+      - title: linkedin
+        url: https://linkedin.com/pub/christine-shyu/4a/70/79
+      - title: twitter
+        url: https://twitter.com/shyuchris
+
+# Short text about your company. Shown in footer on every page and also separately on Home and Contact page.
+about: "The Maker Group at the Donald Danforth Plant Science Center is a forum for all members of the Center to explore constructing low-cost hardware and software engineering tools."
+copyright: "©2016 Donald Danforth Plant Science Center. All rights reserved"

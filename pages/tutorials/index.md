@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: Tutorial Overview
+title: Tutorials
 subtitle: Tutorial Overview
 ---
 <h2 align="center">Tutorial Overview</h2>

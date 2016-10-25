@@ -1,0 +1,18 @@
+---
+layout: project
+title:  "Raspberry Pi LED Illumination and Imaging Station Tutorial"
+date:   2014-08-21 00:00:00
+author: Allison Tielking
+categories:
+- project
+img: RPi_LED.jpg
+carousel:
+- RPi_LED.jpg
+- RPi_LED setup.png
+
+lab: Nusinow Lab
+website: http://danusinow.github.io/
+---
+
+A Danforth Center Maker Project by Allison Tielking (Winter 2014 MICDS Highschool Intern), Tom Liu (2014 Summer STARS student) and Dmitri Nusinow
+
