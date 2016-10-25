@@ -3,9 +3,7 @@ title: The Maker Group
 baseurl: ''
 # url: http://maliagehan.github.io/maker-site
 
-# Build settings
-markdown: redcarpet
-highlighter: pygments
+
 
 # Jekyll-Bootstrap
 JB:
