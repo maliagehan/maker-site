@@ -113,6 +113,6 @@ members:
       - title: twitter
         url: https://twitter.com/shyuchris
 
-# Short text about your company. Shown in footer on every page and also separately on Home and Contact page.
+# Shown in footer on every page and also separately on Home and Contact page.
 about: "The Maker Group at the Donald Danforth Plant Science Center is a forum for all members of the Center to explore constructing low-cost hardware and software engineering tools."
-copyright: "©2016 Donald Danforth Plant Science Center. All rights reserved"
+copyright: "©2017 Donald Danforth Plant Science Center. All rights reserved"
