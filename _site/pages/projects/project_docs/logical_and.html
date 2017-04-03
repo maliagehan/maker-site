@@ -102,46 +102,44 @@
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <h1>Documentation</h1>
       <div class="jumbotron">  
-  <h2>Logical Operations - And</h2>
+  <h2 id="logical-operations---and">Logical Operations - And</h2>
 
-<p>Join two images using the bitwise AND operator. Images must be the same size. This is a wrapper for the Opencv Function <a href="http://docs.opencv.org/modules/core/doc/operations_on_arrays.html">bitwise_and</a>.  </p>
+<p>Join two images using the bitwise AND operator. Images must be the same size. This is a wrapper for the Opencv Function <a href="http://docs.opencv.org/modules/core/doc/operations_on_arrays.html">bitwise_and</a>.</p>
 
-<p><font color='blue'><b>logical_and(img1, img2, device, debug=False)</font></b><br>
-<font color='orange'><strong>returns</strong></font> device, &#39;and&#39; image</p>
+<font color="blue"><b>logical\_and(img1, img2, device, debug=False)&lt;/font&gt;</b><br />
+<font color="orange">**returns**</font> device, 'and' image
+    
+- **Parameters:**   
+  - img1 - image object 1.
+  - img2 - image object 2.
+  - device - Counter for image processing steps
+  - debug- Default value is False, if True, intermediate image will be printed 
 
-<ul>
-<li><p><strong>Parameters:</strong>   </p>
+- **Context:**  
+  - Used to combine to images. Very useful when combining image channels that have been thresholded seperately.
 
-<ul>
-<li>img1 - image object 1.</li>
-<li>img2 - image object 2.</li>
-<li>device - Counter for image processing steps</li>
-<li>debug- Default value is False, if True, intermediate image will be printed </li>
-</ul></li>
-<li><p><strong>Context:</strong>  </p>
+- **Example use:**  
 
-<ul>
-<li>Used to combine to images. Very useful when combining image channels that have been thresholded seperately.</li>
-</ul></li>
-<li><p><strong>Example use:</strong>  </p>
+ - [Use In Tutorial]()
+ 
+  ```python
+    import plantcv as pcv
+    
+    # Combine two images that have had different thresholds applied to them. For logical 'and' operation object pixel must be in both images to be included in 'and' image.
+    
+    device, and_image = pcv.logical_and(s_threshold, b_threshold, device, args.debug)
 
-<ul>
-<li><a href="">Use In Tutorial</a></li>
-</ul>
-<div class="highlight"><pre><code class="python language-python" data-lang="python"><span class="kn">import</span> <span class="nn">plantcv</span> <span class="kn">as</span> <span class="nn">pcv</span>
+  ```
+  <a href="/img/documentation_images/logical_and/5_fill0.png" target="_blank">
+  <img src="/img/documentation_images/logical_and/5_fill0.png" width="200" /></a>
+  <a href="/img/documentation_images/logical_and/9_fill150.png" target="_blank">
+  <img src="/img/documentation_images/logical_and/9_fill150.png" width="200" /></a>
+  <a href="/img/documentation_images/logical_and/10_and_joined.png" target="_blank">
+  <img src="/img/documentation_images/logical_and/10_and_joined.png" width="200" /></a><br />
+  Figure 1. (Left) Original image 1. (Middle) Original image 2.(Right) Image combined with logical 'and' operation.  
+ 
 
-<span class="c"># Combine two images that have had different thresholds applied to them. For logical &#39;and&#39; operation object pixel must be in both images to be included in &#39;and&#39; image.</span>
-
-<span class="n">device</span><span class="p">,</span> <span class="n">and_image</span> <span class="o">=</span> <span class="n">pcv</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">s_threshold</span><span class="p">,</span> <span class="n">b_threshold</span><span class="p">,</span> <span class="n">device</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">debug</span><span class="p">)</span>
-</code></pre></div>
-<p><a href="/img/documentation_images/logical_and/5_fill0.png" target="_blank">
-<img src="/img/documentation_images/logical_and/5_fill0.png" width="200"></a>
-<a href="/img/documentation_images/logical_and/9_fill150.png" target="_blank">
-<img src="/img/documentation_images/logical_and/9_fill150.png" width="200"></a>
-<a href="/img/documentation_images/logical_and/10_and_joined.png" target="_blank">
-<img src="/img/documentation_images/logical_and/10_and_joined.png" width="200"></a><br>
-Figure 1. (Left) Original image 1. (Middle) Original image 2.(Right) Image combined with logical &#39;and&#39; operation.  </p></li>
-</ul>
+</font>
 
       </div>
   
