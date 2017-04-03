@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79dbafa2-7780-4c0c-89c8-949ef88bf2ed" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/assets/css/bootstrap.css" afterPath="$PROJECT_DIR$/_site/assets/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/maker group/techshop/tour-of-the-saint-louis-techshop.html" afterPath="$PROJECT_DIR$/_site/blog/maker group/techshop/tour-of-the-saint-louis-techshop.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/raspberry pi/raspberry pi jam/raspberry-pi-jam-october-15-2016.html" afterPath="$PROJECT_DIR$/_site/blog/raspberry pi/raspberry pi jam/raspberry-pi-jam-october-15-2016.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/resources/resources-for-makers.html" afterPath="$PROJECT_DIR$/_site/blog/resources/resources-for-makers.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/category.html" afterPath="$PROJECT_DIR$/_site/category.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/outreach/maker group/raspberry pi education fund/DDPSC-Maker-Group-RaspberryPi.html" afterPath="$PROJECT_DIR$/_site/outreach/maker group/raspberry pi education fund/DDPSC-Maker-Group-RaspberryPi.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/pages/blog.html" afterPath="$PROJECT_DIR$/_site/pages/blog.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/pages/outreach.html" afterPath="$PROJECT_DIR$/_site/pages/outreach.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/pages/tutorial.html" afterPath="$PROJECT_DIR$/_site/pages/tutorial.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/project/RPi_LED.html" afterPath="$PROJECT_DIR$/_site/project/RPi_LED.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/project/raspberry-pi-web-cam-carrier.html" afterPath="$PROJECT_DIR$/_site/project/raspberry-pi-web-cam-carrier.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tutorial/plantcv/Plantcv-Information.html" afterPath="$PROJECT_DIR$/_site/tutorial/plantcv/Plantcv-Information.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tutorial/raspberry pi/led/raspberry pi camera/RPi-LED-Illumination-and-Imaging.html" afterPath="$PROJECT_DIR$/_site/tutorial/raspberry pi/led/raspberry pi camera/RPi-LED-Illumination-and-Imaging.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/bootstrap.css" afterPath="$PROJECT_DIR$/assets/css/bootstrap.css" />
     </list>
     <ignored path="maker-site.iws" />
@@ -58,8 +47,8 @@
       <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/bootstrap.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+            <state relative-caret-position="120">
+              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -91,7 +80,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="890" />
-    <option name="height" value="735" />
+    <option name="height" value="734" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -122,7 +111,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="890" height="735" extended-state="0" />
+    <frame x="0" y="23" width="890" height="734" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -296,8 +285,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        <state relative-caret-position="120">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
           <folding />
         </state>
       </provider>
