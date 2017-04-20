@@ -17,23 +17,23 @@ DDPSC Maker Site
 
 <p>Create a Blog post by creating a file called yyyy-mm-dd-name-of-post-like-this.markdown in the /_posts/blog/ directory with the following template:</p>
 
-<p><b>---</b></p>
-<p><b>layout: post</b>          #important: don't change this</p>
-<p><b>title:</b> "Name of post like this"</p>
-<p><b>date:</b> yyyy-mm-dd hh:mm:ss</p>
-<p><b>author:</b> Name</p>
-<p><b>categories:</b></p>
-<p><b>- blog</b>                #important: leave this here</p>
-<p><b>-</b> category1</p>
-<p><b>-</b> category2</p>
-<p><b>img:</b> post01.jpg       #place image (850x450) with this name in /assets/img/blog/</p>
-<p><b>thumb:</b> thumb01.jpg    #place thumbnail (70x70) with this name in /assets/img/blog/thumbs/</p>
-<p><b>---</b></p>
-<p>This text will appear in the excerpt "post preview" on the Blog page that lists all the posts.</p>
-
-<p><b><
-!--more--></b></p>
-<p>This text will not be shown in the excerpt because it is after the excerpt separator.</p>
+```
+---
+layout: post          #important: don't change this
+title: "Name of post"
+date: yyyy-mm-dd hh:mm:ss
+author: Name
+categories:
+- blog                #important: leave this here
+- category1
+- category2
+img: post01.jpg       #place image (850x450) with this name in /assets/img/blog/
+thumb: thumb01.jpg    #place thumbnail (70x70) with this name in /assets/img/blog/thumbs/
+---
+This text will appear in the excerpt "post preview" on the Blog page that lists all the posts.
+<!--more-->
+This text will not be shown in the excerpt because it is after the excerpt separator.
+```
 
 =======================================================
 
@@ -42,30 +42,29 @@ DDPSC Maker Site
 
 <p>Create a Project post to go in your Portfolio by creating a file called yyyy-mm-dd-name-of-the-project.markdown in the /_posts/project/ directory with the following template:</p>
 
+```
+---
+layout: project      #important: don't change this
+title:  "Name of the project"
+date: yyyy-mm-dd hh:mm:ss
+author: Name
+categories:
+- project            #important: leave this here
+- category1
+- category2
+img: portfolio_10.jpg #place image (600x450) with this name in /assets/img/project/
+carousel:
+- single01.jpg        #place image (1280x600) with this name in /assets/img/project/carousel/
+- single02.jpg  
 
-<p><b>---</b></p>
-<p><b>layout: project</b>       #important: don't change this</p>
-<p><b>title:</b>  "Name of the project"</p>
-<p><b>date:</b> yyyy-mm-dd hh:mm:ss</p>
-<p><b>author:</b> Name</p>
-<p><b>categories:</b></p>
-<p><b>- project</b>             #important: leave this here</p>
-<p><b>-</b> category1</p>
-<p><b>-</b> category2</p>
-<p><b>img:</b> portfolio_10.jpg #place image (600x450) with this name in /assets/img/project/</p>
-<p><b>carousel:</b></p>
-<p><b>-</b> single01.jpg        #place image (1280x600) with this name in /assets/img/project/carousel/</p>
-<p><b>-</b> single02.jpg  </p>
+lab: lab of project
+website: webpage of lab
+---
 
-<p><b>lab:</b> lab of project</p>
-<p><b>website:</b> webpage of lab</p>
-<p><b>---</b></p>
-
-<p>This is a regular paragraph. Write as much as you like.</p>
-
-<p><b><
-!--more--></b></p>
-<p>This text will not be shown in the excerpt because it is after the excerpt separator.</p>
+This is a regular paragraph. Write as much as you like.
+<!--more-->
+This text will not be shown in the excerpt because it is after the excerpt separator.
+```
 
 =======================================================
 
@@ -73,25 +72,24 @@ DDPSC Maker Site
 
 <p>Create a Tutorial post to go in tutorial by creating a file called yyyy-mm-dd-name-of-the-project.markdown in the /_posts/tutorial/ directory with the following template:</p>
 
+```
+---
+layout: tutorial_post      #important: don't change this
+title:  "Name of the tutorial"
+date: yyyy-mm-dd hh:mm:ss
+author:</b> Name
+categories:
+- tutorial                 #important: leave this here
+- category1
+- category2
+img: tutorial_10.jpg #place image (600x450) with this name in /assets/img/tutorial/
 
-<p><b>---</b></p>
-<p><b>layout: tutorial_post</b>      #important: don't change this</p>
-<p><b>title:</b>  "Name of the tutorial"</p>
-<p><b>date:</b> yyyy-mm-dd hh:mm:ss</p>
-<p><b>author:</b> Name</p>
-<p><b>categories:</b></p>
-<p><b>- tutorial</b>             #important: leave this here</p>
-<p><b>-</b> category1</p>
-<p><b>-</b> category2</p>
-<p><b>img:</b> tutorial_10.jpg #place image (600x450) with this name in /assets/img/tutorial/</p>
+---
 
-<p><b>---</b></p>
-
-<p>This is a regular paragraph. Write as much as you like.</p>
-
-<p><b><
-!--more--></b></p>
-<p>This text will not be shown in the excerpt because it is after the excerpt separator.</p>
+This is a regular paragraph. Write as much as you like.
+<!--more-->
+This text will not be shown in the excerpt because it is after the excerpt separator.
+```
 
 =======================================================
 
@@ -99,22 +97,21 @@ DDPSC Maker Site
 
 <p>Create a Outreach post to go in outreach by creating a file called yyyy-mm-dd-name-of-the-project.markdown in the /_posts/outreach/ directory with the following template:</p>
 
+```
+---
+layout: outreach_post      #important: don't change this
+title:  "Name of the post"
+date: yyyy-mm-dd hh:mm:ss
+author: Name
+categories:
+- outreach                 #important: leave this here
+- category1
+- category2
+img: outreach_10.jpg #place image (600x450) with this name in /assets/img/outreach/
 
-<p><b>---</b></p>
-<p><b>layout: outreach_post</b>      #important: don't change this</p>
-<p><b>title:</b>  "Name of the post"</p>
-<p><b>date:</b> yyyy-mm-dd hh:mm:ss</p>
-<p><b>author:</b> Name</p>
-<p><b>categories:</b></p>
-<p><b>-</b> category1</p>
-<p><b>-</b> category2</p>
-<p><b>- outreach</b>             #important: leave this here</p>
-<p><b>img:</b> outreach_10.jpg #place image (600x450) with this name in /assets/img/outreach/</p>
+---
 
-<p><b>---</b></p>
-
-<p>This is a regular paragraph. Write as much as you like.</p>
-
-<p><b><
-!--more--></b></p>
-<p>This text will not be shown in the excerpt because it is after the excerpt separator.</p>
+This is a regular paragraph. Write as much as you like.
+<!--more-->
+This text will not be shown in the excerpt because it is after the excerpt separator.
+```
