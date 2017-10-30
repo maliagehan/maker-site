@@ -71,6 +71,24 @@ members:
         url: https://linkedin.com/pub/malia-gehan/19/682/647
       - title: twitter
         url: https://twitter.com/maliagehan
+  - name: Nate Ellis
+    position: NSF Postdoctoral Fellow
+    text: Maker Group Co-Director
+    img: robot_purple.jpg
+    social:
+      - title: linkedin 
+        url: https://www.linkedin.com/in/ellisnathanael
+      - title: twitter
+        url: http://twitter.com/n8ls
+  - name: Leonardo Chavez
+    position: Phenotyping Technician
+    text: Maker Group Co-Director
+    img: robot_blue.jpg
+    social:
+      - title: linkedin 
+        url: https://linkedin.com/in/leonardo-chavez-69984629
+      - title: twitter
+        url: http://twitter.com/Leo_Chavez037
   - name: Dmitri Nusinow
     position: Assistant DDPSC Member and PI
     text: Active Member
@@ -87,15 +105,6 @@ members:
     social:
       - title: twitter
         url: https://twitter.com/maxjfeldman
-  - name: Leonardo Chavez
-    position: Phenotyping Technician
-    text: Active Member
-    img: robot_blue.jpg
-    social:
-      - title: linkedin 
-        url: https://linkedin.com/in/leonardo-chavez-69984629
-      - title: twitter
-        url: http://twitter.com/Leo_Chavez037
   - name: Kazuhiro Kikuchi
     position: Postdoctoral Researcher
     text: Active Member
