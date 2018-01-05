@@ -1,0 +1,34 @@
+---
+layout: project
+title:  "PheNode"
+date:   2018-01-04 12:00:00
+author: Dr. Todd Mockler and Dr. Nadia Shakoor
+categories:
+- project
+img: phenode.jpg
+carousel:
+- phenode.jpg
+- phenode2.jpg
+- phenode3.jpg
+- phenode4.jpg
+
+lab: Mockler Lab
+website: https://www.agrelaeco.com/
+---
+
+The PheNode is a solar powered, cloud connected, plant phenotyping and atmospheric data collection system. 
+We developed the PheNode when we realized that there was no affordable solution to our need for a remotely 
+operated imaging and sensor system that we could use to phenotype plants.  We needed a tool that would give 
+us both images and atmospheric data that could be correlated to experimental plot specific conditions. 
+We began work to build the tool we needed in the summer of 2016, and unveiled the first working prototype 
+at the fall, 2016 Ag Innovation Showcase at The DDPSC, after having received a provisional patent for the technology. 
+Since then, we have received strong interest from farmers of all types from all over the world, from commodity 
+crops to specialty crops, as well as researchers like us.  
+
+In the summer of 2017 we completed our first field test with our alpha phase prototype and are in the process 
+of developing our beta phase prototype to deploy in the 2018 growing season.  We currently have two working 
+display prototypes which are sending data that anyone can look at, one here at The DDPSC and one at The Saint 
+Louis Science Center in their GROW! Exhibit- check out the <a href="http://phenode.azurewebsites.net/" target="_blank">link</a> provided to 
+“see” what the PheNode “sees” and senses.  
+
+<a href="http://phenode.azurewebsites.net/" target="_blank">phenode.azurewebsites.net</a>

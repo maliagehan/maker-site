@@ -1,0 +1,22 @@
+---
+layout: project
+title:  "Root Race"
+date:   2017-11-15 12:00:00
+author: Adam Bray
+categories:
+- project
+img: root_race.jpg
+carousel:
+- root_race.jpg
+- root_race1.gif
+- root_race2.gif
+
+lab: Topp Lab
+website: 
+---
+
+Adam Bray, graduate student in the Topp Lab, developed a root imaging system for in lab 
+experiments and as an outreach tool in which he calls, “Global Root Race!”. Adam has 
+showcased the imaging system in D.C., St. Louis Science Center, and for STEM Day at 
+Jury Elementary. 
+
