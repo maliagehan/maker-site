@@ -11,15 +11,14 @@ thumb: learncode_thumb.jpg
 
 ---
 
-<b>How do you develop Maker skills?</b> If you are looking for great sites to learn how to code, 
-how to set up your Raspberry Pi, or looking for inspiration for a new project then take a look at this collection of useful websites to get you started.
+<b>How do you develop Maker skills?</b> If you are looking for great sites to learn how to code, set up your Raspberry Pi, or looking for inspiration for a new project then take a look at this collection of useful websites to get you started.
 If you'd like a website added please <a href="{{site.baseurl}}/pages/contact.html" target="_blank">contact us</a>.<!--more-->
 
 A great place to start is to browse the amazing <a href="https://www.raspberrypi.org/magpi/issues/" target="_blank">catalogue</a> of the official 
-Raspberry Pi magazine <a href="https://www.raspberrypi.org/magpi/issues/65/" target="_blank">MagiPi</a> and the Essential books series that cover topics on <a href="https://www.raspberrypi.org/magpi/issues/essentials-gpio-zero-v1/" target="_blank">Electronics</a>, 
+Raspberry Pi magazine <a href="https://www.raspberrypi.org/magpi/issues/65/" target="_blank">MagiPi</a> and the Essentials Guide book series going over <a href="https://www.raspberrypi.org/magpi/issues/essentials-gpio-zero-v1/" target="_blank">Electronics</a>, 
 <a href="https://www.raspberrypi.org/magpi/issues/essentials-c-v1/" target="_blank">C Programming</a>, and <a href="https://www.raspberrypi.org/magpi/issues/essentials-bash-vol1/" target="_blank">Command Line</a> plus 
-many more all avaiable as a free PDF download. They just released a <a href="https://www.raspberrypi.org/magpi/issues/beginners-1/" target="_blank">Beginner's Book</a> and have a <a href="https://www.raspberrypi.org/magpi/issues/projects-3/" target="_blank">Project Book</a> 
-to look at creations from the community.
+many more available as a free PDF download. Recently released are a <a href="https://www.raspberrypi.org/magpi/issues/beginners-1/" target="_blank">Beginner's Book</a> and a <a href="https://www.raspberrypi.org/magpi/issues/projects-3/" target="_blank">Project Book</a> 
+to showcase creations from the community.
 
 
 <table align="center">
@@ -56,6 +55,10 @@ to look at creations from the community.
     <tr>
         <td style="padding:15px 15px 15px 15px;"><a href="https://makezine.com/" target="_blank">Make DIY Projects</a></td>
         <td style="padding:15px 15px 15px 15px;">Discover various maker projects and learn new skill.</td> 
+    </tr>
+    <tr>
+        <td style="padding:15px 15px 15px 15px;"><a href="https://www.instructables.com/" target="_blank">Instructables</a></td>
+        <td style="padding:15px 15px 15px 15px;">A place to find tutorials, discover projects, and seek answers to Maker projects.</td> 
     </tr>
 </table>
 
