@@ -3,7 +3,8 @@ title: The Maker Group
 baseurl: ''
 # url: http://maliagehan.github.io/maker-site
 
-
+# Google Analytics
+google_analytics: UA—112049115-1
 
 # Jekyll-Bootstrap
 JB:
