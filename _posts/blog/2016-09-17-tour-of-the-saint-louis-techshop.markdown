@@ -5,7 +5,7 @@ date: 2016-09-17 01:00:00
 author: Leonardo Chavez
 categories:
 - blog
-- Maker Group
+- MakerGroup
 - TechShop
 img: techshop_logo.jpg
 thumb: techshoplogo_thumb.jpg
